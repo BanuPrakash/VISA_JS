@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="Question.js"></script>
+    <script src="Quiz.js"></script>
+    <script>
+        var questions = [
+            new Question(
+                "State True or False: instance variables are on heap", 
+                ["true", "false"], 
+                "true"
+            ),
+            new Question(
+                "Capital of India", 
+                 ["Bengaluru", "Hyderabad", "Delhi", "Cochin"], 
+                "Delhi"
+            )
+        ];
+
+        var quiz = new Quiz("GK", questions);
+
+    </script>
+</body>
+</html>

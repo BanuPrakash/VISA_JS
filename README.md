@@ -180,6 +180,9 @@ obj.age = 32;
 
 2) Using Function Constructor
 ```
+
+Class Owned instance methods:
+
 // name and age are state
 function Person(name, age) {
     this.name = name;
@@ -211,6 +214,96 @@ if(Person.equals(p1, p2)) {
 }
 Person("Rita", 22); // ? --> modifies attributes of "global/window" object
 
+
+Object owned instance methods:
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.setAge = function(age) {
+        this.age = age;
+    }
+    this.getAge = function() {
+        return this.age;
+    }
+}
 ```
+
+3) JSON
+JavaScript Object Notation {}
+
+key is a string, value can be string, number, object, boolean, null, array, function
+
+```
+var person = {
+    "name": "Kevin",
+    "age": 25,
+    getName: function() {
+        return this.name;
+    },
+    setAge: function(age) {
+        this.age = age;
+    },
+    getAge: function() {
+        return this.age;
+    }
+}
+
+person.setAge(44);
+console.log(person.getName(), person.getAge());
+
+```
+https://addyosmani.com/learning-jsdp/
+
+=====
+
+every "function" inherits for "Object"
+
+function add(x, y) {
+    return x + y;
+}
+//var add = new Function("x", "y", "return x + y")
+
+this is an instance of "Function" extends "Object"
+
+===
+Bind
+```
+var person = {
+    "name": "Kevin",
+    "age": 25,
+    getName: function() {
+        return this.name;
+    }
+}
+
+var ref = person.getName;
+
+ref();
+
+var ref2 = person.getName.bind(person);
+ref2();
+```
+call()  and apply() 
+```
+function update(name) {
+    this.name = name;
+}
+
+var book = {
+    name : "JS in Action",
+    price: 890.00
+}
+
+var person = {
+    name : "Peter",
+    age: 53
+}
+
+update.call(book, 'React Ref');
+
+update.call(person, 'Beena');
+```
+
 
 
