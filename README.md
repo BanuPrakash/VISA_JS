@@ -99,7 +99,7 @@ setInterval(function timed() {
     console.log("timed!!!");
 }, 1000);
 
-document.addEventListener("click", function clicked() {
+$.on("click", function clicked() {
     console.log("clicked");
 });
 console.log("Bye");
