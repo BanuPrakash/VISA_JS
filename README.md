@@ -139,3 +139,78 @@ setTimeout(function timed2() {
 console.log("Bye");
 ```
 
+Steps:
+
+npx create-react-app someapp
+cd someapp
+npm start
+
+------
+```
+1) 
+// returns a number
+function add(x, y) {
+    return x + y;
+}
+
+var result = add(4,5); // 9
+
+2)
+// returns undefined
+function add(x, y) {
+    console.log(x + y);
+}
+var result = add(4,5); // undefined
+
+3) 
+function add(x, y) {
+    return 
+        x + y;
+}
+
+var result = add(4,5); // undefined
+```
+OOP with JS
+
+1) Object
+
+var obj = new Object();
+obj.name = "Tim";
+obj.age = 32;
+
+2) Using Function Constructor
+```
+// name and age are state
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+//adding behaviour
+Person.prototype.getName = function() {
+    return this.name;
+}
+
+Person.prototype.getAge = function() {
+    return this.age;
+}
+
+Person.prototype.setAge = function(age) {
+    this.age = age;
+}
+// static function
+Person.equals = function(p1, p2) {
+    return (p1.name === p2.name) && (p1.age === p2.age);
+}
+var p1 = new Person("Roger", 19);
+
+var p2 = new Person("Yanni", 89);
+
+if(Person.equals(p1, p2)) {
+
+}
+Person("Rita", 22); // ? --> modifies attributes of "global/window" object
+
+```
+
+
