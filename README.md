@@ -317,6 +317,46 @@ map --> transform
 filter --> subset
 reduce() ==> aggregate
 
+=================
 
 
+```
+var products = [
+            { "name": "iPhone", "price": 120000.00, "category": "mobile" },
+            { "name": "Samsung TV", "price": 240000.00, "category": "tv" },
+            { "name": "Wacom", "price": 8000.00, "category": "computer" },
+            { "name": "Logitech Mouse", "price": 890.00, "category": "computer" },
+            { "name": "Samsung Fold", "price": 218000.00, "category": "mobile" }
+        ]
+
+products.map(p => p.name).forEach(name => console.log(name));
+
+var result = products.filter(p => p.category === 'mobile')
+            .map(p => p.price)
+            .reduce((v1, v2) => v1 + v2, 0.0);
+
+```
+
+function returns a function ==> Closure
+
+```
+function adder(base) {
+    return function(no) {
+        return base + no;
+    }
+}
+
+var fiveAdder = adder(5);
+
+var tenAdder = adder(10);
+
+tenAdder(2);
+fiveAdder(2);
+```
+
+getProduct(5);
+
+Spring Restful Controller --> Database --> Jackson --> JSON --> send as payload
+
+memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls to pure functions and returning the cached result when the same inputs occur again
 
