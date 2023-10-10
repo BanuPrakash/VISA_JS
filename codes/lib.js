@@ -24,3 +24,11 @@ function forEach(elems, action) {
         action(elems[i]);
     }
 }
+
+function reduce(elems, aggregateFn, initialValue) {
+    for(var i = 0; i < elems.length; i++) {
+        initialValue = aggregateFn(initialValue, elems[i]);
+    }
+    return initialValue;
+}
+
