@@ -411,3 +411,10 @@ const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 
+===============
+
+evt.stopPropagation();
+evt.preventDefault();
+
+============
+
