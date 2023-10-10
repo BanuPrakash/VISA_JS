@@ -360,3 +360,54 @@ Spring Restful Controller --> Database --> Jackson --> JSON --> send as payload
 
 memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls to pure functions and returning the cached result when the same inputs occur again
 
+=============
+
+https://www.w3schools.com/js/js_htmldom.asp
+
+BOM Browser Object Model
+Document Object Model
+DOM ==> tree of objects, language independent create from XML / HTML
+
+* access elements
+    1) getElementById()
+    <button id="btn">Ok</button>
+
+    document.getElementById("btn")
+
+    2) getElementsByTagName()
+   var anchors =  document.getElementsByTagName("a"); ==> get all <a>
+
+   3) querySelector()
+
+   document.querySelector(".tmpl-headerNavItem_home") ==> by class
+   document.querySelector("#btn") ==> by id
+
+    querySelectorAll()
+
+     document.querySelectorAll("a") ==> by tagname
+
+      document.querySelectorAll(".headers")
+
+
+* create elements
+    --> createElement() is a factory method
+    document.createElement("a");
+    document.createElement("tr");
+    appendChild()
+
+* traverse through elements
+
+* delete elements
+* add / remove event handlers
+
+
+EventHandling
+
+DOM elements can generate events
+https://www.w3schools.com/jsref/obj_event.asp
+
+
+const evt = new Event("look", { bubbles: true, cancelable: false });
+document.dispatchEvent(evt);
+
+
