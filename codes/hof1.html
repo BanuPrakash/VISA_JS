@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib.js"></script>
+</head>
+
+<body>
+    <script>
+        var data = [6, 3, 1, 5, 7, 8];
+        function doubleIt(e) {
+            return e * 2;
+        }
+        var result = map(data, e => e * 2);
+        forEach(result, console.log);
+        // forEach(result, alert);
+
+        result = filter(data, e => e % 2 === 0);
+        forEach(result, console.log);
+
+        console.log("*************");
+
+        var products = [
+            { "name": "iPhone", "price": 120000.00, "category": "mobile" },
+            { "name": "Samsung TV", "price": 240000.00, "category": "tv" },
+            { "name": "Wacom", "price": 8000.00, "category": "computer" },
+            { "name": "Logitech Mouse", "price": 890.00, "category": "computer" },
+            { "name": "Samsung Fold", "price": 218000.00, "category": "mobile" }
+        ]
+        // get mobiles
+        // print names of products
+    </script>
+</body>
+
+</html>

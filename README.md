@@ -305,5 +305,17 @@ update.call(book, 'React Ref');
 update.call(person, 'Beena');
 ```
 
+Day 2
+
+Functional Style of Programmig using High Order Functions [ HOF ]
+* functions which accept function as argument
+* function returns a function
+
+* forEach(), map(), filter(), reduce(), skip(), limit()
+rxmarbles
+map --> transform
+filter --> subset
+reduce() ==> aggregate
+
 
 
