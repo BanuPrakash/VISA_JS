@@ -418,3 +418,87 @@ evt.preventDefault();
 
 ============
 
+ES 6 / ECMAScript 2015 / ES 6 version features
+
+1) arrow operator
+2) String template literal ``
+3) block scope using "let" and "const"
+```
+var g = 10;
+const PI = 3.14159;
+
+function doTask() {
+    var a = 20;
+
+    if(a > g) {
+        let b = 30; // not hoisted to function scope
+    }
+
+    console.log(g, a, b, c); // b is not visible
+}
+
+doTask();
+console.log(g,  c);
+```
+
+4) Destructuring
+4.1) destructuring objects
+
+var product =  { "name": "iPhone", "price": 120000.00, "category": "mobile" };
+
+let {name, price} = product;
+
+console.log(name, price);
+
+OR
+
+let {name : n, price: p} = product;
+console.log(n, p);
+
+// legacy code
+console.log(product.name, product.price);
+
+4.2) destructuring arrays
+
+let colors = ["red", "green", "blue", "orange", "pink"];
+
+let [r,g,...others] = colors;
+
+console.log(r); // red
+console.log(g); // green
+console.log(others); // ["blue", "orange", "pink"]
+
+// legacy
+console.log(colors[0]);
+
+5) Clone
+
+
+var product =  { "name": "iPhone", "price": 120000.00, "category": "mobile" };
+
+var ref = product; // pointer , reference
+
+ref.price = 9999; // here product.price is 9999
+
+var prdCpy = {...product};
+prdCpy.price = 8888;
+
+---
+
+var data = [54,225,45];
+
+var dataCpy = [...data]; // clone
+
+--------------------------------
+
+6) Promise API --> Async calls
+
+Callback hell
+
+getConnection()
+    .then(connection => getProjects(connection))
+        .then(projects => getEmployess(projects))
+        .then(emp => getEmails(emp))
+        .then(email => sendEmail());
+
+7) async and await
