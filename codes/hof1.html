@@ -32,6 +32,19 @@
         ]
         // get mobiles
         // print names of products
+
+        var cards = map(products, p => `
+            <div class="card">
+                <div class="header">
+                    ${p.name}
+                </div>
+                <div class="body">
+                    Rs. ${p.price}
+                </div>
+            </div>
+        `);
+
+        forEach(cards, console.log);
     </script>
 </body>
 
