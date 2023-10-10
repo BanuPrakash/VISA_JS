@@ -502,3 +502,9 @@ getConnection()
         .then(email => sendEmail());
 
 7) async and await
+
+npm i webpack webpack-cli html-webpack-plugin
+npm i css-loader style-loader
+npm i webpack-dev-server
+npm i babel-loader @babel/preset-env @babel/core
+
