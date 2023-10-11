@@ -739,3 +739,28 @@ This is especially useful for webpack bundles that include a hash in the filenam
  Big projects can contain many bundles instead of one.
 
  <script src="../dist/bundle.js"></script>
+
+ npm run prod
+ or
+ npm run dev
+
+ ==========
+
+ DOM with Quiz
+
+ 1. Out of the following which is an insulating material ?
+() Copper 
+
+() Gold 
+
+() Silver 
+
+() Paper 
+
+<<Next>>
+
+Last Page display the Score
+
+----
+
+
