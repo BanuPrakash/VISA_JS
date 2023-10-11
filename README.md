@@ -508,3 +508,83 @@ npm i css-loader style-loader
 npm i webpack-dev-server
 npm i babel-loader @babel/preset-env @babel/core
 
+============
+
+Day 3
+
+Recap: Functional style Programming, Closure, DOM, Promise APi
+
+NodeJS
+Node.js is a platform / back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. 
+
+libuv is a multi-platform C library that provides support for asynchronous I/O based on event loops. --> instead of WebApi
+
+Why do i need NodeJs/ Where can i Use it?
+* Build Web application like Servlet / JSP [ server side code]
+* Build RESTful WS like Spring Boot [ JS framework called ExpressJS]
+* Build Realtime applications --> ChatBot
+* Build Streaming platform --> OTT [ Netflix / Prime / HotStar ]
+* Building Client side Web application
+
+Why NodeJS Building Client side Web application [React / Angular / Vue / Backbone].
+
+1) We might choose to write code in ES 6+ / TypeScript / CoffeeScript / LiveScript / DART
+Target JS engine is ES 5 compatable
+
+ES 6+ --> Transpile [ Babel / Tracuer] --> ES 5
+Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older JavaScript engines.
+
+lib.ts --> compile [tsc] => lib.js
+
+lib.ts
+let name:string = "Harry";
+name = 99; // error
+let age:number = 34;
+
+---
+lib.js
+let name = "Harry";
+let age = 34;
+
+2) Minify and Uglify the code
+Minification ==> remove extra whitespaces and newline characters.
+    var  x  =  10;
+    var  y = 15;
+
+var x=10;var y=15;
+Uglify ==> big function names and variables are shortend
+
+3) bundle
+
+Without bundle:
+index.html
+<script src="coreModule.js"></script>
+<script src="productModule.js"></script>
+<script src="customerModule.js"></script>
+<script src="orderModule.js"></script>
+<script src="paymentModule.js"></script>
+
+40-50 js file min in small size project
+--> issue is order of <script> tag is important
+--> each <script> makes a network call
+
+With bundle:
+<script src="bundle.js"></script> --> Production code
+
+4) Unit testing
+5) E2E testing
+6) Static code analysis --> Linting
+
+-----
+
+NodeJS uses CommonJS module system
+
+Node basic example:
+1) intialize a node project
+node_basic> npm init --y
+
+creates package.json --> one per node project like pom.xml
+* package.json will contain scripts for "start", "test", "lint" , "deploy"
+* contains dependencies [ 3rd party software modules]
+
+With nodejs commonjs module system, all variables and functions are private to module [ one file --> one module]
