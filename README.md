@@ -588,3 +588,40 @@ creates package.json --> one per node project like pom.xml
 * contains dependencies [ 3rd party software modules]
 
 With nodejs commonjs module system, all variables and functions are private to module [ one file --> one module]
+
+package.json
+ "start": "node src/index.js",
+
+node_basic> npm start
+
+Node Package Managers:
+1) npm [comes by default with NodeJs]
+2) yarn
+3) PNPM
+
+--> used to manage dependencies
+--> deploy the module to repository
+--> run scripts
+
+node_basic> npm install lodash 
+
+installs the dependencies in "node_modules" folder; every project has one "node_modules" folder
+
+package.json gets the details
+"dependencies": {
+    "lodash": "^4.17.21"
+}
+similar to
+<dependency>
+    <groupId></groupId>
+    <artifactId></artifactId>
+</dependency>
+
+"lodash": "4.17.21" ==> exact version
+
+"lodash": "^4.17.21" ==> minimum version required is "4.17.21", if repository contains version greater than this --> downloaded latest
+
+"lodash": "~4.17.21" ==> major version has to be "4", minor and patch can be latest [ 4.18.33 is valid] ; 5.2.1 is not valid
+
+
+"node_modules" folder will not but pushed to repository
