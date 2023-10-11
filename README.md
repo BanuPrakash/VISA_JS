@@ -625,3 +625,26 @@ similar to
 
 
 "node_modules" folder will not but pushed to repository
+
+// npm i lodash@5.1.1
+
+other team members:
+node_basic> npm install / npm i
+
+===
+
+Unit Testing
+JS unit testing frameworks:
+1) Jasmine
+2) Mocha
+3) Jest
+
+npm i jest -D
+
+-D means required only in development phase, not required in production
+
+AAA ==> Assemble Action Assert
+
+"test": "jest"
+
+Code Coverage

@@ -32,7 +32,11 @@ function reduce(elems, aggregateFn, initialValue) {
     return initialValue;
 }
 
+function add(x, y) {
+    return x + y;
+}
 module.exports = {
+    add,
     forEach,
     filter
 }
