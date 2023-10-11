@@ -5,7 +5,7 @@ var result = filter(data, e => e % 2 === 0);
 //(data, function (e) {\n  return e % 2 === 0;\n});
 forEach(result, console.log);
 
-console.log("Hello World!!!");
+console.log("Hello World Webpack!!!");
 
 let p1 = new Person("David", 23);
 

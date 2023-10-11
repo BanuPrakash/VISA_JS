@@ -727,3 +727,15 @@ jest.config.js ==> to configure testing related things like CodeCoverage
     babel-config.js
         we specify which presets has to be used
         @babel/preset-env
+
+Html-webpack-plugin
+
+The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. 
+This is especially useful for webpack bundles that include a hash in the filename which changes every compilation.
+
+<script src="../dist/bundle.FF@%23224.js"></script>
+<script src="../dist/bundle.Bf3#1r22.js"></script>
+
+ Big projects can contain many bundles instead of one.
+
+ <script src="../dist/bundle.js"></script>
