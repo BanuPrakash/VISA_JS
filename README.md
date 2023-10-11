@@ -652,3 +652,59 @@ Code Coverage
 node ./src/server.js 
 
 
+http://localhost:1234/
+
+==================
+
+1) npm init --y
+2) npm i package
+3) package.json has dependency and development dependency etnries
+4) pacakage.json can have scripts [start, test, lint, ...]
+5) built-in moduls [ fs, http]
+6) lodash and jest are 3rd party installed modules
+7) using jest for unit testing
+
+============
+
+JavaScript build tools:
+1) Grunt
+2) Gulp
+3) Webpack [ default which comes with React / Angular ,...]
+
+Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, uglify, compilation, unit testing, and linting. 
+
+a.ts --> tsc a.ts --> a.js
+
+
+ES6 / ES2015 uses ESM --> ES Module system [ instead of CommonJS]
+
+
+babel-loader --> loads imported "js" files --> gives it to babel-core [ transcompiler] --> convert into compatable lower version code.
+Some of the new features are not convertable to lower version
+
+@babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). 
+
+A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers 
+
+https://www.npmjs.com/package/core-js
+https://caniuse.com/
+
+ "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+
+node_example %  npm run dev
+
+
+asset bundle.js 5.1 KiB [emitted] (name: main)
+runtime modules 695 bytes 3 modules
+cacheable modules 822 bytes
+  ./src/index.js 94 bytes [built] [code generated]
+  ./src/lib.js 728 bytes [built] [code generated]
+webpack 5.88.2 compiled successfully in 433 ms
+
+node_example %  npm run prod
+
+asset bundle.js 217 bytes [emitted] [minimized] (name: main)
+orphan modules 728 bytes [orphan] 1 module
+./src/index.js + 1 modules 1000 bytes [built] [code generated]
+webpack 5.88.2 compiled successfully in 552 ms
