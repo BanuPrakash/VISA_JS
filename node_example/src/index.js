@@ -1,3 +1,5 @@
+import './styles.css';
+
 import { forEach, filter } from "./lib"; // ES 6 module System
 import Person from "./Person";
 var data = [6, 3, 1, 5, 7, 8];
