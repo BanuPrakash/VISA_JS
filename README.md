@@ -708,3 +708,22 @@ asset bundle.js 217 bytes [emitted] [minimized] (name: main)
 orphan modules 728 bytes [orphan] 1 module
 ./src/index.js + 1 modules 1000 bytes [built] [code generated]
 webpack 5.88.2 compiled successfully in 552 ms
+
+===========================
+1)
+jest --> Unit testing framework
+jest.config.js ==> to configure testing related things like CodeCoverage
+
+
+2) webpack
+    JS build tool / bundler
+  webpack.config.js
+    entry, output
+    module - rules
+    importing "js" files --> babel-loader --> babel-core --> @babel/preset-env
+    importing "ts" files --> ts-loader --> tsc
+
+ babel
+    babel-config.js
+        we specify which presets has to be used
+        @babel/preset-env
