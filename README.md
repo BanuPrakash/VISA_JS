@@ -807,6 +807,7 @@ React.createElement("div", {style: {'color': 'red'}},
     React.createElement("div", null, React.createElement("h1", null, "Data")));
 
 * Class Component
+--> state and behaviour
 * Functional Component
 
 * props ==> what is passed from parent to child
@@ -814,4 +815,5 @@ React.createElement("div", {style: {'color': 'red'}},
 <Product name="iPhone" price ="98000.00" />
 
 
-
+ npx create-react-app customerapp
+ 
