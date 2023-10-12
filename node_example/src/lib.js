@@ -19,7 +19,7 @@ export function filter(elems, predicate) {
 }
 
 // HOF
-export function forEach(elems, action) {
+export default function forEach(elems, action) {
     for (var i = 0; i < elems.length; i++) {
         action(elems[i]);
     }

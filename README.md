@@ -759,8 +759,20 @@ This is especially useful for webpack bundles that include a hash in the filenam
 
 <<Next>>
 
+
 Last Page display the Score
 
 ----
 
+
+
+Day 4
+https://createapp.dev/webpack
+npm i ts-loader
+
+import Product from './Product'
+Product.tsx / Product.ts / Product.js
+
+npx tsc --init
+generate tsconfig.json
 

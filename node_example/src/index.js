@@ -1,6 +1,6 @@
 import './styles.css';
-
-import { forEach, filter } from "./lib"; // ES 6 module System
+import multiply from './lib2';
+import  forEach, {filter } from "./lib"; // ES 6 module System
 import Person from "./Person";
 var data = [6, 3, 1, 5, 7, 8];
 var result = filter(data, e => e % 2 === 0);
@@ -12,3 +12,6 @@ console.log("Hello World Webpack!!!");
 let p1 = new Person("David", 23);
 
 console.log(p1.getName(), p1.getAge());
+
+let output = multiply(4, 5);
+console.log(output);
