@@ -10,7 +10,7 @@ module.exports = function () {
         module: {
             rules: [
                 {
-                    test: /\.js$/,
+                    test: /\.js(x)?$/,
                     use: 'babel-loader'
                 },
                 {
@@ -28,6 +28,7 @@ module.exports = function () {
             extensions: [
                 '.tsx', 
                 '.ts',
+                '.jsx',
                 '.js'
             ]
         },

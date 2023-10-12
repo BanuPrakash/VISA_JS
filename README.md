@@ -776,3 +776,42 @@ Product.tsx / Product.ts / Product.js
 npx tsc --init
 generate tsconfig.json
 
+====================
+
+React
+
+Client Side Rendering:
+1) Plain DOM
+2) jQuery
+$("div") --> document.createElement("div")
+
+$("#btn").on("click", () => {});
+document.getElementById("btn").addEventListener("click", () => {})
+
+3) Templates
+Handlebar, Mustache, Underscore, jQueryTemplates, Knockout, EJS, Pug, Jade,....
+looks similar to JSP
+
+4) MVC Architecture Pattern
+4.1) Backbone library --> provides Model and Controller support, for views we need any of above templates
+4.2) AngularJS --> Framework
+4.3) XHP --> 2010, FaxJS
+4.4) ReactJS 
+5) Angular --> Framework
+
+----------------
+
+https://github.com/chentsulin/awesome-react-renderer
+
+React.createElement("div", {style: {'color': 'red'}}, 
+    React.createElement("div", null, React.createElement("h1", null, "Data")));
+
+* Class Component
+* Functional Component
+
+* props ==> what is passed from parent to child
+
+<Product name="iPhone" price ="98000.00" />
+
+
+
