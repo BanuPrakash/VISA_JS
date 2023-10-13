@@ -841,3 +841,17 @@ npm test
 
 npm test -- --coverage
 
+===
+
+npm i cypress -D
+
+package.json
+"e2e": "cypress open"
+
+End2End Testing needs running application
+npm start
+npm run e2e
+
+generates cypress.config.js
+
+
