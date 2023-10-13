@@ -817,3 +817,27 @@ React.createElement("div", {style: {'color': 'red'}},
 
  npx create-react-app customerapp
  
+Reconciliation is the process through which React updates the Browser DOM.
+
+https://claudiopro.github.io/react-fiber-vs-stack-demo/
+
+sourceMap ==> default enabled in create-react-app
+webpack.config.js
+cheap-module-source-map: true
+
+
+React Testing Library(RTL) is built on top of JEST
+
+Prior to React 16 --> Enzyme
+
+<h1>Customer Application</h1>
+
+screen.getByText(/Customer Application/i);
+
+screen.queryByPlaceholderText('search by name');
+
+
+npm test
+
+npm test -- --coverage
+
