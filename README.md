@@ -867,5 +867,30 @@ shouldComponentUpdate() -> true --> render() --> componentDidUpdate()
 shouldComponentUpdate() -> false
 
 
+QuizComponent
+
+state = {
+    questions = [
+        {
+            "question": "What is MVC?",
+             "options: ["Language", "Library", "Framework", "Application"],
+             "correct" : "Framework"
+        },
+        {
+            "question": "What is the smallest unit of data in a computer?",
+             "options: ["Gigabyte", "Bit", "Byte", "Terabyte"],
+             "correct" :  "Bit"
+        },
+        {
+        "question": "What is the full form of PROM ?" , 
+        "options": ["Program read-only memory", "Primary read-only memory", "Programmable read-only memory", "Program read-output memory "],
+        "correct": "Programmable read-only memory"
+        },
+        {
+            "question":"What is URL ?",
+            "options": ["Undistributed Resource Locator", "Unified Resource Locator", "Uniform Region Locator", "Uniform Resource Locator"],
+            "correct": "Uniform Resource Locator"
+        }
+]
 
 
