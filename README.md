@@ -854,4 +854,18 @@ npm run e2e
 
 generates cypress.config.js
 
+========================
+
+Component Lifecycle methods
+
+First Contentful Paint (FCP) is a non-Core Web Vital that measures the time from when a page starts loading to when any part of that page's content is rendered on the screen.
+
+constructor() --> render() --> componentDidMount()
+
+shouldComponentUpdate() -> true --> render() --> componentDidUpdate()
+
+shouldComponentUpdate() -> false
+
+
+
 
