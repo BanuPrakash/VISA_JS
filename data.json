@@ -1,37 +1,5 @@
 {
   "orders": [
-    {
-      "customer": "banu@gmail.com",
-      "items": [
-        {
-          "id": 2,
-          "name": "Nokia 8.1",
-          "qty": 1,
-          "amount": 26000
-        },
-        {
-          "id": 5,
-          "name": "Realme 2",
-          "qty": 2,
-          "amount": 19700
-        }
-      ],
-      "total": 45700,
-      "id": 1
-    },
-    {
-      "customer": "Ria@gmail.com",
-      "items": [
-        {
-          "id": 1,
-          "name": "Apple iPhone X 64,GB ",
-          "qty": 2,
-          "amount": 174098
-        }
-      ],
-      "total": 174098,
-      "id": 2
-    }
   ],
   "products": [
     {
