@@ -893,6 +893,7 @@ state = {
         }
 ]
 
+```
 
 import { useEffect, useState } from "react";
 
@@ -946,3 +947,5 @@ export default function LifeCycleComponent() {
         </div>
     )
 }
+
+```
