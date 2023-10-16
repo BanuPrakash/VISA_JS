@@ -895,57 +895,86 @@ state = {
 
 ```
 
-import { useEffect, useState } from "react";
 
-export default function LifeCycleComponent() {
-    let [users, setUsers] = useState([]);
-    let [username, setName] = useState();
-    let [details, setDetails] = useState(null);
-    // similar to componentDidMount();
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users').then(response => {
-            response.json().then(data => setUsers(data));
-        });
-    }, []); //empty dependency
+React Hooks are a new addition in React 16.8. 
+They let you use state and other React features without writing a class.
 
-    // similar to componentDidUpdate()
-    useEffect(() => {
-        // executes whenever props or state change
-    });
+1) useState()
+useState is a Hook. We call it inside a function component to add some local state to it. 
+React will preserve this state between re-renders.
 
-    // similar to componentDidUpdate()
-    useEffect(() => {
-        // executes whenever userName change
-        fetch('https://jsonplaceholder.typicode.com/users?username=' + username)
-            .then(response => {
-                response.json().then(data => setDetails(data[0]));
-            });
-    }, [username]);
+2) useEffect()
+is to simulate Component Life Cycle methods in Functional component
 
-    return (
-        <div>
-            <div>
-                <h1>Details</h1>
-                {
-                    details &&
-                    <div>
-                        Name : {details.name} <br />
-                        Company : {details.company.name} <br />
-                        Website : {details.website} <br />
-                    </div>
-                }
-            </div>
-            <hr />
-            {
-                users.map(user => <div>
-                    <span onMouseEnter={() => setName(user.username)}>
-                        UserName : {user.username} <br />
-                    </span>
-                    Email : {user.email} <br />
-                </div>)
-            }
-        </div>
-    )
-}
+3) useReducer()
+4) useCallback()
+5) useMemo()
+6) useRef() --> createRef()
 
 ```
+class Parent extends Component {
+    state = {
+        name : "",
+        age: 18
+    }
+    
+    setName(arg){
+        this.setState( {
+            name: arg
+         })
+    }
+
+    setAge(arg) {
+        this.setState( {
+            age: arg
+        })
+    }
+}
+```
+StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.
+
+=====
+
+useReducer()
+
+useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one, conditionally mutate the state.
+
+cart: [
+    {"id": 1, "name": "", qty: 1},
+    {"id": 2, "name": "", qty: 1},
+    {"id": 3, "name": "", qty: 1},
+    {"id": 4, "name": "", qty: 1},
+    total: 87878
+]
+
+Actions:
+1) ADD_TO_CART
+payload: {}
+
+2) REMOVE_FROM_CART
+payload: 2
+
+3) INCREMENT
+payload: 1
+
+4) CLEAR_CART
+no payload
+
+1) action object
+{
+    "type": "ADD_TO_CART",
+    payload: {}
+}
+
+2) Reducer function
+reducer  (state, action) => newState
+
+3) useReducer
+initialState = {
+    cart: [],
+    total: 0.0
+}
+const [state, dispatch] = useReducer(reducer, initialState);
+
+dispatch(action); --> way to invoke reducer function
+

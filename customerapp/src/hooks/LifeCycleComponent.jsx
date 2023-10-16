@@ -9,6 +9,8 @@ export default function LifeCycleComponent() {
         fetch('https://jsonplaceholder.typicode.com/users').then(response => {
             response.json().then(data => setUsers(data));
         });
+
+        return () => console.log("Component destroyed!!!");
     }, []); //empty dependency
 
     // similar to componentDidUpdate()
