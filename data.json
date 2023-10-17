@@ -1,5 +1,34 @@
 {
   "orders": [
+    {
+      "customer": "banu@gmail.com",
+      "total": 113049,
+      "items": [
+        {
+          "productDescription": "The iPhone X models with Super Retina with 3D Touch",
+          "id": 1,
+          "productImageUrl": "/images/iphone-x-in-hand.jpg",
+          "productName": "Apple iPhone X 64,GB ",
+          "productPrice": 87049,
+          "productQuantity": 5,
+          "productSeller": "Apple",
+          "qty": 1,
+          "amount": 87049
+        },
+        {
+          "productDescription": "4 GB RAM 15.7 cm Full HD+ Display,20MP Front Camera 3500 mAh Battery Qualcomm Snapdragon 710 Processor",
+          "id": 2,
+          "productImageUrl": "/images/nokia8-1.jpg",
+          "productName": "Nokia 8.1",
+          "productPrice": 26000,
+          "productQuantity": 3,
+          "productSeller": "Nokia",
+          "qty": 1,
+          "amount": 26000
+        }
+      ],
+      "id": 1
+    }
   ],
   "products": [
     {
