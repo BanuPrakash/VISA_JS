@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Button } from "react-bootstrap";
+import { CartContext } from "../context/CartProvider";
 
 export function CartItem({ product }) {
+    let {increment} = useContext(CartContext);
+
     return <div className="row">
         <div className="col-md-2">
             <img src={product.productImageUrl} style={{ width: '50px' }} />
@@ -16,7 +20,7 @@ export function CartItem({ product }) {
             &nbsp;
             {product.qty}
             &nbsp;
-            <Button>+</Button>
+            <Button onClick={() => increment(product.id)}>+</Button>
         </div>
         <div className="col-md-2">
             Amount: {product.amount}
