@@ -5,9 +5,10 @@ export default function cartReducer(state, action) {
             item.qty = 1;
             item.amount = item.productPrice;
 
+            let itms = [...state.cartItems, item];
             return {
-                cartItems: [...state.cartItems, item],
-                total: cartItems.map(item => item.amount).reduce((v1, v2) => v1 + v2)
+                cartItems: itms,
+                total: itms.map(item => item.amount).reduce((v1, v2) => v1 + v2, 0)
             }
         case 'INCREMENT': return state;
         case 'DECREMENT': return state;
