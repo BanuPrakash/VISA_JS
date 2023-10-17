@@ -978,4 +978,18 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 dispatch(action); --> way to invoke reducer function
 
+==============
 
+1) React Router DOM
+
+http://localhost:3000
+http://localhost:3000/cart
+http://localhost:3000/new_product
+http://localhost:3000/details/4
+http://localhost:3000/products
+http://localhost:3000/dsfsdf
+
+<a href="products">Products</a> --> Server side routing
+
+2) go to folder where data.json exists
+npx json-server --watch data.json --port 1234
