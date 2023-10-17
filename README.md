@@ -993,3 +993,7 @@ http://localhost:3000/dsfsdf
 
 2) go to folder where data.json exists
 npx json-server --watch data.json --port 1234
+
+React DevTools
+Redux DevTools
+
