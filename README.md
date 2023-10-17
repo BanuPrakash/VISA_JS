@@ -997,3 +997,43 @@ npx json-server --watch data.json --port 1234
 React DevTools
 Redux DevTools
 
+ProductForm.jsx
+
+Controller Component vs UnControlled Component
+
+In React, controlled components refer to components that have their state and behavior controlled by the parent component. 
+
+Uncontrolled components refer to components that manage their own state internally.
+
+Controller Component
+```
+export default function ProductForm() {
+    let [productName, setProductName] = useState();
+    let [productPrice, setProductPrice] = useState();
+
+    return <>
+        Name <input type="text" onChange={(evt) => setProductName(evt.target.value)} /> <br />
+        Price <input type="text" onChange={(evt) => setProductPrice(evt.target.value)} /> <br />
+    </>
+}
+```
+
+UnController Compoenent
+```
+export default function ProductForm() {
+    let nameRef = useRef();
+    let priceRef = useRef();
+    return <>
+        Name <input type="text" ref={namRef}/> <br />
+        Price <input type="text" ref={priceRef/> <br />
+        <button onClick={() => handleSubmit()}>Add Product</button>
+    </>
+
+    function handleSubmit() {
+        let product = {
+            productName: nameRef.current.value,
+            productPrice: priceRef.current.value
+        }
+    }
+}
+```
