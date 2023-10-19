@@ -1037,3 +1037,44 @@ export default function ProductForm() {
     }
 }
 ```
+
+Redux Toolkit
+The official, opinionated, batteries-included toolset for efficient Redux development.
+Simple: Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more.
+
+Takes inspiration from libraries like Immer and Autodux to let you write "mutative" immutable update logic
+
+1) npm install @reduxjs/toolkit react-redux
+
+2) "@fortawesome/free-solid-svg-icons": "^6.4.2",
+  "@fortawesome/react-fontawesome": "^0.2.0",
+  "axios": "^1.5.1",
+  "bootstrap": "^5.3.2",
+  "react-bootstrap": "^2.9.0",
+ "react-router-dom": "^6.17.0"
+
+3) npm i
+
+4) npx json-server --watch data.json --port 1234
+
+5) Convert CartContext ==> Redux implementation
+
+const slice = createSlice({
+  name: 'test',
+  initialState: 0,
+  reducers: {
+    increment: (state, action) => state + action.payload,
+    decrement: (state) => state -1,
+    clear: () => 0;
+  },
+})
+
+slice.actions.increment(2)
+
+slice.actions.decrement()
+
+slice.actions.clear()
+
+useSelector() -->  is approximately equivalent to the mapStateToProps argument to connect conceptually.
+useDispatch() --> is similar to mapDispatchToProps
+
