@@ -1083,3 +1083,9 @@ useDispatch() --> is similar to mapDispatchToProps
 Async Logic and Data Fetching
 
 https://redux.js.org/tutorials/fundamentals/part-6-async-logic
+
+ docker run  -p 27017:27017 --name mongodb mongo 
+
+MongoDB NoSQL
+
+npm i mongoose

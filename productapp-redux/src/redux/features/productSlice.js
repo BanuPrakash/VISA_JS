@@ -26,7 +26,7 @@ const productsSlice = createSlice({
         builder.addCase(fetchProducts.rejected, (state, action) => {
             state.products = [];
             state.loading = "idle";
-            state.error = action.payload;
+            state.error = action.error.message;
         })
     },
 })

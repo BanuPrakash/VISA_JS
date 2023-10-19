@@ -13,6 +13,7 @@ const EmployeeSchema = mongoose.Schema({
 });
 
 const EmployeeModel = mongoose.model('Employee', EmployeeSchema);
+// maps Employee --> to Employees collection
 
 connection.once('connected', async () => {
     try {
