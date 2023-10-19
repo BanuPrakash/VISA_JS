@@ -1078,3 +1078,8 @@ slice.actions.clear()
 useSelector() -->  is approximately equivalent to the mapStateToProps argument to connect conceptually.
 useDispatch() --> is similar to mapDispatchToProps
 
+========
+
+Async Logic and Data Fetching
+
+https://redux.js.org/tutorials/fundamentals/part-6-async-logic
