@@ -17,7 +17,7 @@ const productSchema = new Schema({
 
 // _id: ObjectId() is auto generated
 const Product = model("Product", productSchema); // mapping like @Table
-// products collection will be used from database
+// products collection will be used from database [sales_db]
 // using Product model we perform CRUD operations
 
 // instead of "on" we use "once" for un-subscribe the connection
