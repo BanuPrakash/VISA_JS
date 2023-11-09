@@ -59,19 +59,22 @@ sales_db> show collections
 
 ------
 1) select * from sales
+```
 a) 
 sales_db> db.sales.find()
 
 this will list first 20 documents, use "it" to get next 
 sales_db> it
 
-
+```
 b)
+```
 sales_db> db.sales.find().pretty()
 
 sales_db> db.sales.find().pretty().limit(2)
-
+```
 2) Using Where clause
+```
 select * from sales where category = 'Dairy products'
 
 db.sales.find({"category": "Dairy products"})
@@ -82,19 +85,22 @@ db.sales.find({"category": "Dairy products", "quarter": 1})
 
 select * from sales where category = 'Dairy products' or quarter = 1
 db.sales.find({"$or": [{"category": "Dairy products"}, {"quarter": 1}]})
+```
 
 
 3) getting scalar values [ limiting the fields]
+```
 select category from sales;
 
 db.sales.find({}, {"category": 1})
 
 // get all except sales
 db.sales.find({}, {"sales": 0})
-
+```
 
 4) insert record
 
+```
 db.sales.insertOne({"quarter": 4, "category":"mobile", sales: 89000.00})
 
 db.sales.find({"category":"mobile"})
@@ -102,18 +108,22 @@ db.sales.find({"category":"mobile"})
 
 
 db.sales.insertMany([{}, {}, {}]);
+```
 
 5) update
 
-db.sales.updateMany({"quarter":1}, {"sales": 34343});
+```
 
+db.sales.updateMany({"quarter":1}, {"sales": 34343});
+```
 6) Regular Expression
+```
 db.sales.find({"category" : /air/}) 
 
 db.sales.find({"product" : /^sir/i}) 
 
 db.sales.find({"category" : /s$/}) 
-
+```
 ----
 
 ```
