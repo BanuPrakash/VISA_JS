@@ -14,7 +14,10 @@ const customerSchema = new Schema({
                 console.log(data) // banuprakashc@yahoo.co.in
                 return /^[a-z]{3,10}@[a-z0-9]+\.(com|edu|co\.in)$/.test(data)
             },
-            message: props => `${props.value} is not a vaild Email`
+            message: props => {
+            console.log(props);
+            `${props.value} is not a vaild ${path}`
+            }
         }
     }
 });
