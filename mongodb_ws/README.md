@@ -145,3 +145,13 @@ docsExamined: 38,
 
 ```
 
+JS <-- MongoDB driver --> MongoDB
+
+mongodb driver is like JDBC for Java to connect to RDBMS
+
+mongoose --> ODM --> Object Document modeling like ORM [hibernate]
+
+===
+
+codes > npm init --y
+codes> npm i mongoose
