@@ -205,7 +205,154 @@ Function inherits Object
 
 let sub = new Function("x", "y" , "return x - y")
 
+call and apply
+
+update.call(person, "roger", 898992.44);
+update.apply(person, ["roger", 89898.22]);
 =====================
+
+1) let introduced block level scope
+2) arrow : Fat arrow
+```
+let add = (x,y) => x + y;
+```
+3) Destructuring:
+```
+    3.1) Arrays:
+    let data = ["red", "green", "blue", "orange", "pink"];
+
+    let [r, g, ...others] = data;
+
+    console.log(r);
+    console.log(others); // blue, orange and pink
+
+    3.2) Object
+    let user = {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
+
+  let {email, phone : mobile, company} = user;
+  console.log(email, mobile);
+
+4) Clone
+let data = [4,5,7,8,1];
+
+let ref = data;
+ref[0] = 100;
+data[0] will also be 100
+
+let copy = [...data];
+copy[0] = 99;
+data[0] is not changed
+
+Note:
+let newArray = [...data, 62]; clone data and push 62
+
+5) Promise: for async operations [ like Callable and Future of Java]
+
+5.1) if doTask is sync
+function doTask() {
+
+}
+
+let res = doTask(); // blocking code
+
+if doTask is async code
+doTask().then(function (data) {
+    // success, resolved
+},
+function (err) {
+    // failure, reject
+}
+);
+
+// lines here can continue to execute
+
+6) async and await:
+to prevent callback hell [nested callback]
+
+app.post('/performAction', (req, res) => {
+  authenticateUserPromise(req.body.username, req.body.password)
+    .then((isAuthenticated) => {
+      if (!isAuthenticated) {
+        res.status(401).send('Authentication failed');
+        return Promise.reject();
+      }
+
+      // Step 3: Check authorization level of user
+      return checkAuthorizationPromise(req.body.username);
+    })
+    .then((isAuthorized) => {
+      if (!isAuthorized) {
+        res.status(403).send('User not authorized');
+        return Promise.reject();
+      }
+
+      // Step 4: Perform the action
+      return performActionPromise(req.body.actionData);
+    })
+    .then(() => {
+      // Step 5: Send Notification E-mail
+      return sendNotificationEmailPromise(req.body.username);
+    })
+    .then(() => {
+      // Step 6: Send response back to the user browser
+      res.status(200).send('Action performed successfully');
+    })
+    .catch((error) => {
+      console.error('An error occurred:', error);
+      res.status(500).send('An error occurred');
+    });
+});
+
+Alternate with async and await:
+
+app.post('/performAction', async (req, res) => {
+  try {
+    // Step 2: Authenticate the user
+    const isAuthenticated = await authenticateUserPromise(req.body.username, req.body.password);
+
+    if (!isAuthenticated) {
+      res.status(401).send('Authentication failed');
+      return;
+    }
+
+    // Step 3: Check authorization level of user
+    const isAuthorized = await checkAuthorizationPromise(req.body.username);
+
+    if (!isAuthorized) {
+      res.status(403).send('User not authorized');
+      return;
+    }
+
+    // Step 4: Perform the action
+    const result = await performActionPromise(req.body.actionData);
+
+    // Step 5: Send Notification E-mail
+    await sendNotificationEmailPromise(req.body.username);
+
+    // Step 6: Send response back to the user browser
+    res.status(200).send('Action performed successfully');
+  } catch (error) {
+    console.error('An error occurred:', error);
+    res.status(500).send('An error occurred');
+  }
+});
+
+XmlHttpRequest same as fetch()
+```
+
+
 
 
 
