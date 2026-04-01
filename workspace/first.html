@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        let product = {
+            id: 23,
+            name: "LG AC",
+            price: 65000.00,
+            update: function(p) {
+                this.price = p;
+            }
+        }
+
+        product.update(66000.00);
+        console.log(product.price);
+
+        let ref = product.update; // context is lost
+        ref(88888.00);
+        console.log(product.price); // ???
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function update(name) {
+            this.name = name;
+        }
+
+        let person = {
+            name : "Roger",
+            age: 22
+        }
+
+        let product = {
+            name : "Macbook",
+            price : 245000.00
+        }
+
+        update.call(person, "Tim");
+        update.call(product, "Intel");
+        console.log(person)
+        console.log(product);
+    </script>
+</body>
+</html>
