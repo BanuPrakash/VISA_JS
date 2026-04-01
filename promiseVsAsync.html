@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function connectToDb() {
+            return new Promise((res, rej) => {
+                res("Connected to DB!!!");
+            })
+        }
+
+        function getUsers(db) {
+            return new Promise((res, rej) => {
+                res("Users data");
+            })
+        }
+
+        function getProfile(users) {
+             return new Promise((res, rej) => {
+                res("Users Profile");
+            })
+        }
+
+        // connectToDb().then(db => getUsers(db)
+        //                 .then(users => getProfile(users)
+        //                      .then(data => console.log("Task Completed!!!"))))
+
+        async function doTask() {
+            try {
+                let dbCon = await connectToDb();
+                let users = await getUsers(dbCon);
+                let data = await getProfile(users);
+            }catch(err) {
+                console.log(err);
+            }
+          x
+        }
+    </script>
+</body>
+</html>

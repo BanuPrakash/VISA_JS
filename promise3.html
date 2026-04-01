@@ -18,7 +18,11 @@
     function getComments() {
           return new Promise( (resolve, rej) => {
                 fetch("https://jsonplaceholder.typicode.com/comments")
-                .then(response => response.json())
+                .then((resolve, reject) => {
+                                 response => resolve(response.json());
+                            }
+                            , error => reject("Error"))
+                        
                 .then(data => resolve(data));
             });
     }
