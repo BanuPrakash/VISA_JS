@@ -421,3 +421,59 @@ expensive function call:
 getProduct(5); --> Tomcat -> RestController -> Database -> result -> JSON -> return JSON
 
 getProduct(5); -> give it from Cache
+
+================================
+
+```
+fetch(`https://jsonplaceholder.typicode.com/users`)
+.then(response => response.json())
+.then(users => localStorage.setItem("users", JSON.stringify(users)));
+
+let users = JSON.parse(localStorage.getItem("users"))
+
+users[0];
+
+```
+
+DOM: Document Object Model
+
+The Document Object Model (DOM) is a cross-platform, language-independent interface that treats HTML or XML documents as a tree structure, where each node is an object representing a part of the document.
+
+```
+    <products>
+        <product id="1">
+            <name>A</name>
+            <price>1313</price>
+        </product>
+         <product id="2">
+            <name>B</name>
+            <price>6232</price>
+        </product>
+    </products>
+
+JAVA: SAX, DOM libraries
+
+document object
+
+Why this interface?
+* Access elements programatically
+* create / remove / modify elements
+* add events to existing elements
+* traverse thro element
+
+Different ways to access elements:
+1) getElementById single element
+document.getElementById("tmpl-header_nav")
+
+2) getElementByTagNames gives array of elements
+document.getElementsByTagName("div")
+
+3) querySelector and querySelectorAll advance selection option
+Get By class Name:
+document.querySelector(".tmpl-headerNav_item")
+Get By Id:
+document.querySelector("#tmpl-header_nav")
+document.querySelector(".tmpl-headerNav_item > div")
+document.querySelector(".tmpl-headerNav_item > div").innerHTML
+document.querySelector(".tmpl-headerNav_item > div").innerHTML = "Banu Prakash"
+```

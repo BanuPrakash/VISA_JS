@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                 <td>Name</td>
+                <td>Email</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody id="userBody">
+        </tbody>
+    </table>
+
+    <script>
+        let tbody = document.getElementById("userBody");
+
+        fetch(`https://jsonplaceholder.typicode.com/users/`)
+        .then(response => response.json())
+        .then(users => {
+            users.forEach(user => {
+                let tr = document.createElement("tr"); // <tr></tr>
+                let td = document.createElement("td"); // <td></td>
+                let text = document.createTextNode(user.id);
+                td.appendChild(text); // <td>1</td>
+                tr.append(td); // <tr><td>1</td></tr>
+
+                td = document.createElement("td"); // <td></td>
+                text = document.createTextNode(user.username);
+                td.appendChild(text); // <td>Roger</td>
+                tr.append(td); // <tr><td>1</td></tr>
+
+                 td = document.createElement("td"); // <td></td>
+                text = document.createTextNode(user.email);
+                td.appendChild(text); // <td>Roger</td>
+                tr.append(td); // <tr><td>1</td></tr>
+
+                td = document.createElement("td"); // <td></td>
+                btn = document.createElement("button");
+                btn.setAttribute("class", "del");
+                btn.textContent = "Delete";
+                td.append(btn);
+                tr.append(td);
+
+                tbody.append(tr);
+            });
+
+            function doRemove(event) {
+                console.log(event.target);
+                event.target.parentNode.parentNode.remove();
+            }
+
+           // document.getElementsByTagName("button")
+           document.querySelectorAll(".del").forEach(btn => {
+            btn.addEventListener("click" , doRemove);
+           })
+        })
+    </script>
+</body>
+</html>
