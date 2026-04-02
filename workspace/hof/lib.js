@@ -1,10 +1,10 @@
 
 // HOF, action will be a function
-// function forEach(elems, action) {
-//      for(var i = 0; i < elems.length; i++) {
-//         action(elems[i]);
-//      }
-// }
+function forEach(elems, action) {
+     for(var i = 0; i < elems.length; i++) {
+        action(elems[i]);
+     }
+}
 
 function filter(elems, predicateFn) {
     let result = [];

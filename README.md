@@ -394,5 +394,30 @@ Commonly used HOF:
 
 ```
 
+HOF: function returns a function
 
+```
+    function adder(base) {
+        return function(no) {
+            return base + no;
+        }
+    }
 
+    let fiveAdder = adder(5);
+    console.log(fiveAdder(2));
+    console.log(fiveAdder(4));
+
+    let tenAdder = adder(10);
+    console.log(tenAdder(2));
+    console.log(tenAdder(4));
+
+```
+
+Closure: When a function returns a function, returned function can access all the members of outer function
+
+Memoization is an optimization technique that speeds up computer programs by caching (storing) the results of expensive function calls and returning the cached result when the same inputs occur again
+
+expensive function call:
+getProduct(5); --> Tomcat -> RestController -> Database -> result -> JSON -> return JSON
+
+getProduct(5); -> give it from Cache

@@ -7,7 +7,7 @@
      <script src="lib.js"></script>
 </head>
 <body>
-   
+   <div id="cards"></div>
     <script>
         var products = [
             { "id": 1, "name": "Wireless Mouse", "price": 799, "category": "Electronics" },
@@ -49,8 +49,13 @@
 
         // toDiv is my transform function
         var cards = map(products, toDiv);
-
-        forEach(cards, console.log);
+        let elems = "";
+        let placeHolder = document.getElementById("cards");
+        for(var i = 0; i < cards.length; i++) {
+            elems+=cards[i];
+            elems += "<hr >";
+        }
+        placeHolder.innerHTML = elems;
     </script>
 </body>
 </html>
