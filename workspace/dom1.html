@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" placeholder="search by name" />
     <table>
         <thead>
             <tr>
@@ -52,7 +53,9 @@
                 tbody.append(tr);
             });
 
+            // listener
             function doRemove(event) {
+                //target	The DOM element that originally triggered the event.
                 console.log(event.target);
                 event.target.parentNode.parentNode.remove();
             }
@@ -60,7 +63,12 @@
            // document.getElementsByTagName("button")
            document.querySelectorAll(".del").forEach(btn => {
             btn.addEventListener("click" , doRemove);
-           })
+           });
+
+           // document.querySelectorAll("tr")
+           document.querySelectorAll("tr.first > td")
+
+           // document.querySelector("input['placeholder' ='search by name']")
         })
     </script>
 </body>

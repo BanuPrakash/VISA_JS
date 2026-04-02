@@ -476,4 +476,39 @@ document.querySelector("#tmpl-header_nav")
 document.querySelector(".tmpl-headerNav_item > div")
 document.querySelector(".tmpl-headerNav_item > div").innerHTML
 document.querySelector(".tmpl-headerNav_item > div").innerHTML = "Banu Prakash"
+
+1. Basic Selectors
+Universal Selector (*): Selects all elements in the document.
+Type Selector (element): Selects all elements of a specific tag (e.g., p, h1).
+Class Selector (.class): Selects all elements with a specific class attribute.
+ID Selector (#id): Selects a single unique element with a specific ID. 
+
+2. Combinators
+Descendant Selector (A B): Selects all B elements that are anywhere inside A.
+Child Selector (A > B): Selects only direct children B of parent A.
+Adjacent Sibling Selector (A + B): Selects the element B that is immediately after A.
+General Sibling Selector (A ~ B): Selects all B elements that follow A as siblings. 
+
+3. Attribute Selectors
+Presence ([attr]): Selects elements that have the specified attribute.
+Exact Match ([attr="value"]): Selects elements with an exact attribute value.
+Starts With ([attr^="val"]): Selects elements where the attribute begins with "val".
+Ends With ([attr$="val"]): Selects elements where the attribute ends with "val".
+Contains ([attr*="val"]): Selects elements where the attribute contains "val". 
+
+ +4
+4. Pseudo-Classes (State & Position)
+:hover: Styles an element when the user mouses over it.
+:focus: Styles an element when it has keyboard or click focus.
+:not(selector): Selects every element that does not match the specified selector.
+:first-child / :last-child: Targets the first or last child of a parent.
+:nth-child(n): Targets the nth child (e.g., :nth-child(2), :nth-child(odd)).
+:has(selector): Selects an element if it contains a descendant matching the selector. 
+
+5. Pseudo-Elements
+::before / ::after: Inserts content before or after the element's content via CSS.
+::first-letter / ::first-line: Styles the first letter or first line of a block-level element.
+::selection: Styles the part of an element that is highlighted by the user. 
+
+
 ```
