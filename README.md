@@ -525,7 +525,100 @@ One Listener can listen to more than one events from different sources.
 
 https://www.w3schools.com/js/js_events.asp
 
+=======
+
+Rarely use DOM directly.
+Instead we use libraries / framworks on top of it: jQuery, React, Backbone, Angular, Vue, Svelete, Knockout -- use them on top of DOM
 
 
+=============================================
+
+NodeJS: Platform with V8 javascript engine and libuv library for async operations.
+
+Why NodeJS?
+1) build traditional web applications like servlets and JSP using JS as prog lang
+2) build RESTful Web Services like Spring Boot
+3) Streaming platform like OTT
+4) Real time applications like ChatBot
+5) For US: we use this for client side web application development , code which runs on Browser.
+
+Why NodeJS for client side web application development?
+1) We can choose to write code in Latest version of JS, TypeScript, CoffeeScript, liveScript, DART
+
+a) Target JS engine is for version ES2015.
+I have written code in ES2023.
+I need to transpile higher version of code to lower version.
+I will use transpilers like Babel / Tracuer to convert to lower version
+Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older JavaScript engines
+
+NodeJs provides platform to do this conversion.
+
+b) TypeScript: provides typesafety, JS doesn't understand data types
+
+file.ts
+var name:string = "Roger";
+var age:number = 34;
+
+age = "Hello";
+
+tsc file.ts --> file.js [ if no compilation error]
+
+2) NodeJS to do TESTing: Unit testing, Integration, E2E testing
+
+3) Static Code analysis: good programming practices and conventions, tools like ESLint / Sonar
+
+4) Minify and Uglify
  
+ Original code
+ ```
+function calculateCircleArea(radius) {
+    var pi = 3.14159;
+    var area = pi * radius * radius;
+    return area;
+}
 
+console.log(calculateCircleArea(10));
+ ```
+
+ Minified & Uglified Code
+
+```
+function calculateCircleArea(a){return 3.14159*a*a}console.log(calculateCircleArea(10));
+
+```
+
+5) Bundle
+In projects we might write 20+ css files and 50+ js files
+index.html
+```
+    <link rel="stylesheet" href="product.css" >
+     <link rel="stylesheet" href="order.css" >
+     <link rel="stylesheet" href="customer.css" >
+
+
+    
+    <script src="products.js"></script>
+    <script src="customers.js"></script>
+    <script src="orders.js"></script>
+    <script src="payments.js"></script>
+```
+
+Issue with above code:
+1) n+1 hits to the server
+first request downloads index.html to browser
+request goes for fetching seperately product.js, customers.js, ...
+Aprox: 71 requests / network calls from browser to server [FCP first contentful paint] 
+
+2) Order of inclusion matters:
+we assume payment needs orders needs customers and products
+
+Solution: use NodeJs to bundle them
+index.html
+```
+    <link rel="stylesheet" href="styles.css" >
+    <script src="bundle.js"></script>
+```
+
+nodews> node ./lib.js
+
+https://www.classmarker.com/online-test/start/?quiz=jff69ccef300cdaf
