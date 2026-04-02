@@ -7,6 +7,12 @@
 </head>
 <body>
     <input type="text" placeholder="search by name" />
+    <select id="clr">
+        <option value="-1">---SELECT--</option>
+        <option value="red">Red</option>
+        <option value="khaki">khaki</option>
+        <option value="tomato">tomato</option>
+    </select>
     <table>
         <thead>
             <tr>
@@ -66,10 +72,26 @@
            });
 
            // document.querySelectorAll("tr")
-           document.querySelectorAll("tr.first > td")
+          // document.querySelectorAll("tr.first > td")
 
            // document.querySelector("input['placeholder' ='search by name']")
+
+        
         })
+
+           function changeColor(evt) {
+            // evt will be changeEvent
+            // let selectElem = evt.target
+            let selElem =  document.getElementById("clr");
+            var value  = selElem.options[selElem.selectedIndex].value
+            if(value !== "-1") {
+                document.bgColor = value;
+            }
+           }
+           
+           document.getElementById("clr").addEventListener("change", changeColor);
+
+        
     </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <form>
+        Value 1 <input type="number" id="v1" /> <br />
+        Value 2 <input type="number" id="v2" /> <br />
+        Result : <div id="result"></div>
+         Add <input type="radio" name="opt" value="add" />
+         Subtract <input type="radio" name="opt" value="sub" />
+        <button type="button" id="btn">Compute</button>
+    </form>
+    <script>
+        let t1 = document.getElementById("v1");
+        let t2 = document.getElementById("v2");
+        let res = document.getElementById("result");
+
+        function doCompute(evt) {
+            var radios = document.querySelectorAll("input[name='opt']");
+            let v1 = parseFloat(t1.value);
+            let v2 = parseFloat(t2.value);
+
+            var selected = -1;
+            for(radio of radios) {
+                if(radio.checked) {
+                    selected = radio.value
+                }   
+            }
+            if(selected == "add") {
+               res.innerHTML = v1 + v2;
+            } else if( selected === "sub") {
+                res.innerHTML = v1 - v2;
+            }
+        }
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", doCompute);
+    </script>
+</body>
+</html>
