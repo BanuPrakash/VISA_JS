@@ -352,9 +352,47 @@ app.post('/performAction', async (req, res) => {
 XmlHttpRequest same as fetch()
 ```
 
+Recap: 
+JS --> JS engine 
+* Event loop, Macro task Queue, Micro Task Queue, WebApi / Libuv [async libraries]
+* Global Creation context, execution Context
+* Function creation Context, execution Context
+* use strict
+* Different ways of creating objects
+* inheirted methods in function: bind, call, apply
+* Arrow / Lambda, destructuring, Promise, async and await.
 
+====================
 
+HOF: high order functions
+* functions which accept function as argument
+* function returns a function
 
+https://rxmarbles.com/
+Commonly used HOF:
+1) filter
+2) map
+3) reduce
+4) forEach
+
+```
+    let users = [...]
+    let data = [5,2,5,11,14];
+
+    for(var i = 0; i users.length; i++) {
+        console.log(users[i]);
+    }
+    // instead: forEach(data, console.log)
+     for(var i = 0; i users.length; i++) {
+        alert(users[i]);
+    }
+    // instead: forEach(data, alert)
+     for(var i = 0; i users.length; i++) {
+        writeToFile(users[i]);
+    }
+    // instead: forEach(data, writeToFile)
+
+```
 
 
 
