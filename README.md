@@ -621,4 +621,132 @@ index.html
 
 nodews> node ./lib.js
 
-https://www.classmarker.com/online-test/start/?quiz=jff69ccef300cdaf
+==========================
+
+NodeJS Project:
+```
+    project_folder
+        package.json
+        node_modules
+            JS libraries
+        src
+            JS app code
+```
+
+module systems: controls visibility 
+1) IIFE : Immediately Invoked Function Expression)
+```
+    file.js
+
+    let ProductModule = (function() {
+        let data = [];
+        function add(p) {
+            data.push(p);
+        }
+
+        function computeTotal() {
+            ...
+        }
+
+        function getData() {
+            computeTotal(); // valid
+            return data;
+        }
+
+        return {
+            add,
+            getData
+        }
+    })();
+
+    ProductModule.add({id: 1, name: "A"})/ //valid
+    ProductModule.getData(); // valid
+    ProductModule.data; // error
+    ProductModule.computeTotal()
+
+    let CustomerModule = (funciton() {
+        let data = [];
+    })();
+```
+
+2) CommonJS module system : default for NodeJS
+module.exports [exporting ]
+```
+file.js
+  let data = [];
+        function add(p) {
+            data.push(p);
+        }
+
+        function computeTotal() {
+            ...
+        }
+
+        function getData() {
+            computeTotal(); // valid
+            return data;
+        }
+
+module.exports = {
+    add,
+    getData
+}
+
+```
+require [ importing]
+```
+    other.js
+    let {add, getData} = require('./file.js')
+```
+
+3) ESM: ES Module System [ default usage with React / Angular/ Vue ...]
+
+```
+file.js
+  let data = [];
+        export function add(p) {
+            data.push(p);
+        }
+
+        function computeTotal() {
+            ...
+        }
+
+        export default function getData() {
+            computeTotal(); // valid
+            return data;
+        }
+```
+
+other.js
+
+```
+    import getData, {add} from './file'
+```
+
+4) AMD
+5) SystemJS
+6) UMD
+
+===
+
+When nodejs is installed it comes with NPM [ Node Package Manager]
+optionally we can use YARN , PNPM, ...
+Uses: download dependencies, publish, execute goals [npm start, npm test]
+npm install react
+yarn add react
+
+==
+node_example > npm init --y
+
+ "lodash": "4.18.1" --> exact version
+  "lodash": "^4.18.1" --> any latest version 4.18.1 and above
+   "lodash": "~4.18.1" --> major version has to be "4" minor and patch can be latest
+
+Testing, Static code analysis, bundlers, etc should be Development dependencies
+
+Unit testing in JS can be done using any of the below libraries/ test runners:
+1) Mocha
+2) Jasmine
+3) JEST 
+4) vitest
