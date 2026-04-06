@@ -820,3 +820,11 @@ cacheable modules 2.56 KiB
   ./src/lib.js 707 bytes [built] [code generated]
 webpack 5.105.4 compiled successfully in 171 ms
 ```
+
+npm i css-loader style-loader -D 
+
+npm i html-webpack-plugin -D
+The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation
+
+npm i webpack-dev-server -D
+

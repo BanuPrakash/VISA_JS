@@ -1,8 +1,10 @@
 // one file is one module
 
-export function add(x, y) {
+// Arrow fn
+export const  add = (x, y) => {
     return x + y;
 }
+
 // HOF, action will be a function
 export default function forEach(elems, action) {
      for(var i = 0; i < elems.length; i++) {

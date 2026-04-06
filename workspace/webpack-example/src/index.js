@@ -1,11 +1,15 @@
+import './products.css'
 
 //  let fs = require('fs'); // built-in node module
 
 import forEach, {filter, map} from "./lib";
 import Person from "./Person";
 let p = new Person("A", 31);
-console.log(p.getName(), p.getAge());
 
+let t = new Person("B", 21);
+
+console.log(p.getName(), p.getAge());
+console.log(t.getName(), t.getAge());
 //  let {forEach, filter, map} = require('./lib');
 
 
