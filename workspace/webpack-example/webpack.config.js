@@ -7,6 +7,7 @@ module.exports = {
     filename: 'bundle.[contenthash:8].js',
   },
   target: ['web', 'es5'],
+  devtool: "eval-cheap-module-source-map",
   module: {
     "rules": [{
       test : /\.js$/,

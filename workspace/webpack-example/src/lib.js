@@ -32,11 +32,3 @@ export function map(elems, transformFn) {
      }
     return result;
 }
-
-module.exports = {
-    add,
-    forEach,
-    filter,
-    map
-}
-

@@ -46,3 +46,28 @@ console.log(t.getName(), t.getAge());
 
         var doubles = map(data, (no) => no * 2);
         console.log(doubles);
+
+        let product = products[0];
+
+    let React = {
+        createElement:(tag, props, ...children) => {
+            var element = {
+                tag,
+                props: {...props, children}
+            }
+
+            console.log(element);
+            return element;
+        }
+    }
+
+    // 
+   function render() {
+
+    }
+    //JSX
+
+    let ProductCard = <div className='card'>
+        <h1 className='card-header'>${product.name}</h1>
+        <p className='card-body'> ${product.price}, ${product.category}</p>
+    </div>

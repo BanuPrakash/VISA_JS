@@ -828,3 +828,35 @@ The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bu
 
 npm i webpack-dev-server -D
 
+Demystify React:
+npm i @babel/preset-react -D
+To convert JSX to JS
+
+```
+<img src="avatar.png" width="50px" />
+
+src and width are attributes in HTML -- props in React
+
+https://github.com/chentsulin/awesome-react-renderer
+
+https://www.classmarker.com/online-test/start/?quiz=kd769d36812704ec
+```
+
+Recap:
+
+NodeJS: project: package.json, node_modules, commonJS
+JEST : testing library + runner: describe, it /test, expect, jest.fn()
+
+JS automation tools: webpack
+rules: css, js, ts --> loader
+@babel/core is the transcompiler [ higher version of JS to lower version based on target]
+@babel/preset-env: syntax transform, polyfills
+webpack.config.js : rules ,entry, output, module rules , plugin
+babel.config.js / .babelrc / babel.config.jons --> configure presets
+Html-webpack-plugin:
+webpack-dev-server: minature development HTTP server to test 
+devtools: source-map [bundle.js --> should be mapped to original JS for debugging]
+
+JSX: @babel/preset-react --> React object --> createElement -- convert JSX to JS
+
+JS --> render() --> UI 
