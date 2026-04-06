@@ -757,3 +757,66 @@ Assemble --> describe
 Action --> call method
 Assertion - expect(result).toBe(actual)
 
+=================
+
+JS Build automation tools:
+1) Grunt
+2) Gulp
+3) Webpack [default in React and Angular upto FEB 2026]
+4) vite [FEB 2026]
+
+Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting.
+Webpack and vite supports bundling
+
+Webpack example:
+webpack-example> npm init --y
+webpack-example> npm i webpack webpack-cli babel-loader @babel/core @babel/preset-env -D
+
+ESM:
+import React from 'react';
+
+@babel/core --> transcompiler
+@babel/preset-env -> @babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) 
+
+let add = (x,y) => x + y;
+
+```
+function add(x, y) {
+    return x + y;
+}
+```
+
+A polyfill is a piece of JavaScript code used to provide modern functionality on older browsers that do not natively support it
+
+Promise.resolve(...);
+core-js : provides many polyfills
+
+```
+npm run dev
+
+> webpack-example@1.0.0 dev
+> webpack --mode development
+
+asset bundle.js 8.45 KiB [emitted] (name: main)
+runtime modules 1020 bytes 4 modules
+cacheable modules 2.56 KiB
+  ./src/index.js 1.65 KiB [built] [code generated]
+  ./src/lib.js 707 bytes [built] [code generated]
+  ./src/Person.js 228 bytes [built] [code generated]
+webpack 5.105.4 compiled successfully in 55 ms
+
+---
+
+npm run prod
+
+> webpack-example@1.0.0 prod
+> webpack --mode production
+
+asset bundle.js 1.79 KiB [emitted] [minimized] (name: main)
+runtime modules 743 bytes 3 modules
+orphan modules 228 bytes [orphan] 1 module
+cacheable modules 2.56 KiB
+  ./src/index.js + 1 modules 1.87 KiB [built] [code generated]
+  ./src/lib.js 707 bytes [built] [code generated]
+webpack 5.105.4 compiled successfully in 171 ms
+```
