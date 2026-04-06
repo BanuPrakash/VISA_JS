@@ -1,4 +1,8 @@
 // one file is one module
+
+function add(x, y) {
+    return x + y;
+}
 // HOF, action will be a function
 function forEach(elems, action) {
      for(var i = 0; i < elems.length; i++) {
@@ -28,6 +32,7 @@ function map(elems, transformFn) {
 }
 
 module.exports = {
+    add,
     forEach,
     filter,
     map

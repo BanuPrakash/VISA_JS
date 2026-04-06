@@ -750,3 +750,10 @@ Unit testing in JS can be done using any of the below libraries/ test runners:
 2) Jasmine
 3) JEST 
 4) vitest
+
+Chai.js : Assertion library
+
+Assemble --> describe
+Action --> call method
+Assertion - expect(result).toBe(actual)
+
