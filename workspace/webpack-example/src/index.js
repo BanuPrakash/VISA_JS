@@ -49,6 +49,8 @@ console.log(t.getName(), t.getAge());
 
         let product = products[0];
 
+   
+
     let React = {
         createElement:(tag, props, ...children) => {
             var element = {
@@ -61,13 +63,29 @@ console.log(t.getName(), t.getAge());
         }
     }
 
-    // 
-   function render() {
+// first time container is <div id="root"></div>
+// element will be {"tag": "div", "props": {...}}
 
+function render(element, container) {
+    if (['string', 'number'].includes(typeof element)) {
+        container.appendChild(document.createTextNode(String(element)));
+        return;
     }
+    let domElement = document.createElement(element.tag);
+    if (element.props) {
+        if (element.props.children) {
+            element.props.children.forEach(child => render(child, domElement));
+        }
+    }
+    container.appendChild(domElement);
+}
     //JSX
 
     let ProductCard = <div className='card'>
-        <h1 className='card-header'>${product.name}</h1>
-        <p className='card-body'> ${product.price}, ${product.category}</p>
+        <h1 className='card-header'>{product.name}</h1>
+        <p className='card-body'> {product.price}, {product.category}</p>
     </div>
+
+
+render(ProductCard , document.getElementById("root"));
+

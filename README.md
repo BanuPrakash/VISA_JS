@@ -860,3 +860,64 @@ devtools: source-map [bundle.js --> should be mapped to original JS for debuggin
 JSX: @babel/preset-react --> React object --> createElement -- convert JSX to JS
 
 JS --> render() --> UI 
+
+=========================
+
+@babel/core --> transcompiler [Higher version of JS to lower version]
+@babel/preset-env -> syntax transform and polyfills
+@babel/preset-react -> JSX to JS object
+React.createElement() -> generally provided by "react" library
+npm i react
+
+Converted JS object has to be provided to render() functions to create UI element
+for that: react-dom, react-native, react-tv, proton-native
+
+==============
+
+TypeScript:
+Statically typed programming language, it's nothing but JS + type system
+* Check errors at compile time, rather than at runtime
+* Better intellisense
+* Documentation
+
+TypeScript file --> typescript compiler --> JavaScript --> JS engine
+
+========
+1) initalize a NodeJS project [package.json]
+ts-example> npm init --y
+ts-example> npm i typescript -D
+npm i typescript -g
+
+typescript provides typesystem + tsc [ compiler]
+
+ts-example> tsc --init
+or npx tsc --init
+create tsconfig.json
+
+tsconfig.json
+1)  "rootDir": "./src", 
+2) "outDir": "./dist",  
+3)  "include": ["src/**/*.ts"]
+4) "noEmitOnError": true,
+
+Basic data types in typescript:
+string, boolean and number
+
+```
+let fname:string = "Roger";
+let age:number = 34;
+let employeed:boolean = true;
+
+```
+
+ts-example % tsc 
+or
+ts-example % npx tsc
+
+============
+
+Complex types:
+1) type : to define the shape of object like struct of c or similar to minature "class"
+
+2) Genrics
+
