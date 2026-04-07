@@ -1121,4 +1121,8 @@ npm run dev
 Using Webpack:
 npx create-react-app sample-react
 
+props: data passed from parent component to child component
+
+State, event handling, life-cycle methods of React
+
 =====
