@@ -925,3 +925,31 @@ Complex types:
 npx tsc
 node ./dist/lib.js 
 ```
+
+3) any and unknown type [ avoid if possible]
+let's assume we get data from 3rd party JS code. We are not sure what is sent by that function.
+
+let data:any = doTask();
+let data:unknown = doTask();
+
+Used mainly in migration projects
+
+4) in TS default return type of a function is void and not undefined
+
+```
+
+5) union type:
+let course: string | number = "SPRING BOOT";
+course = 5620;
+
+```
+    function doCompute(): string | number {
+        if(...) {
+            return "My Data"
+        } else {
+            return 100;
+        }
+    }
+
+    let res: string | number = doCompute();
+```

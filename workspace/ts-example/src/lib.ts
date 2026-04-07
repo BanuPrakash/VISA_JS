@@ -1,6 +1,7 @@
 function filter<T>(elems:T[], predicateFn: (elem:T) => boolean) {
     let result:T[] = [];
     for(var i:number = 0; i < elems.length; i++) {
+        // @ts-ignore
         if(predicateFn(elems[i])) {
             result.push(elems[i]);
         }
