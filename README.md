@@ -962,3 +962,5 @@ Sometimes we have more information about the type that TypeScript can't known.
 
 8) infer Keyword
 used with conditional types to extract or "infer" a type from another type.
+
+9) Type Predicate
