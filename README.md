@@ -953,3 +953,8 @@ course = 5620;
 
     let res: string | number = doCompute();
 ```
+
+6) TypeScript template literal types:
+build on string literal types, expands into many strings via unions
+
+
