@@ -957,4 +957,8 @@ course = 5620;
 6) TypeScript template literal types:
 build on string literal types, expands into many strings via unions
 
+7) TypeAssertion aka TypeCasting
+Sometimes we have more information about the type that TypeScript can't known.
 
+8) infer Keyword
+used with conditional types to extract or "infer" a type from another type.

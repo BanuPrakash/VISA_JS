@@ -14,6 +14,9 @@ type SizeCSS = `${number}${SizeType}`
 
 type MarginPadding = {
     [key in GapCSS]?: SizeCSS
+//    'margin': SizeCSS,
+//    'margin-bottom': SizeCSS,
+//    'margin-'
 }
 
 const boxCSS: MarginPadding = {
