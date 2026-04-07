@@ -1089,7 +1089,9 @@ Suggested for new react applications is "vite"
 npx create vite@latest
 
 ```
+
 npm create vite@latest
+```
 Need to install the following packages:
 create-vite@9.0.4
 Ok to proceed? (y) 
