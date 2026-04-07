@@ -964,3 +964,52 @@ Sometimes we have more information about the type that TypeScript can't known.
 used with conditional types to extract or "infer" a type from another type.
 
 9) Type Predicate
+
+10) interface similar to type, we prefer type over interface because of its flexibility
+```
+interface Product {
+    id: number,
+    name: string,
+    price: double
+}
+
+interface Mobile extends Product {
+    connectivity: string
+}
+
+```
+interfaces for realization relationship:
+
+```
+    interface Renderer {
+        render(jsx:JSX);
+    }
+
+    class TvRenderer implements Renderer {
+        render(jsx:JSX){
+
+        }
+    }
+     class DomRenderer implements Renderer {
+        render(jsx:JSX){
+            
+        }
+    }
+```
+
+11) Using JS in TS
+most of the libraries available are of JS libraries
+
+https://www.npmjs.com/
+
+https://github.com/Definitelytyped/DefinitelyTyped
+
+npm i lodash
+npm i @types/lodash -D
+
+@types/lodash
+@types/react
+@types/nodejs
+
+=============
+
