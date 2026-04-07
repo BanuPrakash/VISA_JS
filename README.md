@@ -919,5 +919,9 @@ ts-example % npx tsc
 Complex types:
 1) type : to define the shape of object like struct of c or similar to minature "class"
 
-2) Genrics
+2) Generics
 
+```
+npx tsc
+node ./dist/lib.js 
+```

@@ -1,10 +1,18 @@
 function filter<T>(elems:T[], predicateFn: (elem:T) => boolean) {
     let result:T[] = [];
-    for(var i = 0; i < elems.length; i++) {
+    for(var i:number = 0; i < elems.length; i++) {
         if(predicateFn(elems[i])) {
             result.push(elems[i]);
         }
     }
+    return result;
+}
+
+function map<T, R>(elems:T[], transformFn: (elem:T) => R): R[] {
+    let result:R[] = [];
+     for(var i = 0; i < elems.length; i++) {
+        result.push(transformFn(elems[i]));
+     }
     return result;
 }
 
@@ -35,3 +43,17 @@ let evens: number[] = filter(data, (no) => no % 2 === 0);
 
 console.log(evens);
 
+
+// T and R are number
+var doubles:number[] = map(data, (no) => no * 2);
+console.log(doubles);
+
+// T is TProduct
+// R is string
+var names:string[] = map(products, p => p.name);
+
+//"noUncheckedIndexedAccess": true,
+let no = 5;
+if(data[no] !== undefined) {
+let x = data[no] + 5;
+}
