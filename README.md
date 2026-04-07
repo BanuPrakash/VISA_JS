@@ -762,8 +762,8 @@ Assertion - expect(result).toBe(actual)
 JS Build automation tools:
 1) Grunt
 2) Gulp
-3) Webpack [default in React and Angular upto FEB 2026]
-4) vite [FEB 2026]
+3) Webpack [default in React and Angular upto FEB 2025]
+4) vite [FEB 2025]
 
 Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting.
 Webpack and vite supports bundling
@@ -1011,5 +1011,104 @@ npm i @types/lodash -D
 @types/react
 @types/nodejs
 
-=============
+================
 
+SSR -> server side rendering
+CSR -> Client side rendering
+Client side can have applications to convert representation of data in the form of JSON / XML to View
+1) Mobile
+    a) Android
+    b) SWIFT
+    c) Xamarin
+2) Web [ Browser ]
+    a) DOM
+    b) jQuery
+    ```
+        $("<div>") -- document.createElement("div")
+        $("#card") -- document.getElementById("card");
+    ```
+    c) Template based: Mustache, Handlebars, Knockout, Pug, Jade, EJS, ...
+    https://handlebarsjs.com/examples/builtin-helper-each-block.html
+    uses interpolation: data to presentation
+    {{ }}
+    <%- %>
+    d) Backbone
+        MVC based library 
+        provided support for Model and Controller
+        View we could choose any of the above mentioned templates
+
+        Jackson: library -- JAVA <--> JSON
+        Spring : Framework
+    d) AngularJS
+        Google -> Framework
+        based on MVC architecture
+        upto version 1.6
+        Modern: Angular 2 - completly revamped
+
+        Learning Curve: Complex
+        First Program: module, template, service, component, binding, bootstrap
+    c) React: View library
+        XHP: 2010 -> Marcel Laverdet [ XML in PHP]
+        FaxJS: 2011 --> Jordon Walke [ JsCONF] --> JSX
+        Facebook: 2012 React --> open source
+        Khan Academy --> Sophie Alpert
+        Netflix, walmart
+        https://www.youtube.com/watch?v=8pDqJVdNa44&t=4463s
+        Learning Curve : Simple, just need to understand template based views and JSX
+        ```
+            function ProductCard(product) { 
+                return <div className='card'>
+                      <h1 className='card-header'>{product.name}</h1>
+                        <p className='card-body'> {product.price}, 
+                        {product.category}</p>
+                    </div>
+            }
+        ```
+    d) Vue
+    e) Svelete
+   
+3) TV: SmartOS / WebOS api
+
+==========
+
+React application:
+react library : Core capabilities to Handle JSX [ has React.createElement()]
+react-dom: library to render for web 
+
+Atom design pattern.
+
+===========================
+
+Older applications we use Webpack, Create React App (CRA) using webpack deprecated in FEB 2025
+
+Suggested for new react applications is "vite"
+
+===
+1) creating vite project
+
+npx create vite@latest
+
+```
+npm create vite@latest
+Need to install the following packages:
+create-vite@9.0.4
+Ok to proceed? (y) 
+
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  react-simple
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Install with npm and start now?
+│  Yes
+│
+```

@@ -1,4 +1,7 @@
 
+function compute(a:string, b?:number) {
+
+}
 
 
 // prefer
