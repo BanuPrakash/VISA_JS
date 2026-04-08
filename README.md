@@ -1218,8 +1218,55 @@ npm create vite@latest
 React: uni-directional data flow [ parent -> child], one-way mapping
 Angular: two-way binding [ parent <--> child]
 
-=========
+===================
+
+React Hooks are special functions introduced in React 16.8 that allow developers to use state, lifecycle methods, and other core features within functional components without writing a class
+
+Hooks:
+1) useState
+2) useEffect
+3) useReducer
+4) useContext
+5) useRef
+
+Build SPA using routers
+A Single-Page Application (SPA) is a web app that loads a single HTML document and dynamically updates content via JavaScript—usually using frameworks like React or Vue—without full page reloads.
 
 
+RWD: Responsive Web Design
+Definition: An approach to web development that makes pages render well on various devices—desktops, tablets, and phones—using flexible layouts and CSS.
+--> CSS Libraries like Bootstrap, tailwind, Zurb, Bulma, ....
+--> OR write using @media query 
 
+Bootstrap handles RWD:
+1) Viewport is divided into 12 columns
+<img src="" className="col-sm-12 col-md-6 col-lg-4 col-xl-3" />
 
+======
+
+Feature 1: 
+react-router-dom:
+1) Different URLs has to show different components
+2) Lazy loading of components
+
+```
+npm create vite@latest
+shopapp
+react
+javascript
+YES
+
+terminate the server
+
+shopapp> npm i bootstrap react-bootstrap react-router-dom 
+
+BrowserRouter:
+http://amazon.com/mobiles
+http://amazon.com/tv
+http://amazon.com/cart
+
+href is for Server Side Routing
+
+Client Side Routing using as={Link} and to="/url"
+ <Nav.Link as={Link} to="/cart">Cart</Nav.Link> 
+```
