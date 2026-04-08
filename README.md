@@ -1125,4 +1125,96 @@ props: data passed from parent component to child component
 
 State, event handling, life-cycle methods of React
 
-=====
+===========
+
+TypeScript: string, boolean, number, type, any, unknown, undefined, array, enum, interface and class
+
+type and interface are interchangable for defining shape of object.
+interface is prefered for Realization relationship [ abstract method]
+
+Template String literal: union of strings [Chess Board has 64 possible positions]
+CSS Box Model: many combinations like margin: 10px, margin-top:3%, padding-bottom: 15em, ...
+
+The infer keyword: to derive/ extract a type like return type of function, first argument, all params, type of array.
+
+type ReturnType = T extends (...args:any[]) => infer R ? R : never 
+
+type AType = ReturnType<typeof fetch>
+
+==============
+
+React: vite JS build tool was used to create react scaffolding code
+npm create vite@latest
+1) index.html, main.jsx, App.jsx
+2) react and react-dom libraries are included
+3) main.jsx rendered App.jsx 
+
+react library:
+```
+1) React.createElement() --> JSX -> JS Object [ consider as Virtual DOM]
+2) functional components return JSX --> React.createElement() --> JS Object
+3) class components [ not advisable to use from React 16.8 version onwards]
+render() --> JSX --> React.createElement() --> JS Object
+```
+class Users extends Component {
+    // state
+    // behaviour
+    render() {
+        return <div>
+
+        </div>
+    }
+}
+
+```
+
+-====
+
+render provided by react-dom / react-native / proton-native / react-tv
+takes the Virtual DOM [ JS given by React.createElement()] ==> UI elements
+
+==================
+
+Thinking in React: 
+Atomic Design is a methodology for creating design systems by breaking user interfaces into five distinct, hierarchical levels of components
+1) Atoms: The smallest, indivisible building blocks. In React, these are often single HTML elements with basic styling.
+Examples: Buttons, input fields, labels, and icons.
+
+<Image />
+<Button />
+<Input />
+
+99% of the time we use ready to use Atoms from libraries like:
+MUI, react-bootstrap, prime-react, KendoUI, Adobe Web Spectrum
+
+Hardly we use HTML DOM element directly like
+<button type="button">On Click </button>
+
+2) Molecules: Simple groups of atoms functioning together as a single unit.
+Examples: A SearchBar (Input + Button) or a FormField (Label + Input).
+
+3) Organisms: Complex UI sections composed of molecules and/or atoms. They form a distinct, functional part of the interface.
+Examples: Header, Footer, Navigation Bar, or Product Card.
+
+75% of the time we get them from ready to use libraries like mentioned above.
+
+4) Templates: Blueprints or wireframes that arrange organisms into a specific layout structure without focus on final content.
+
+5) Pages
+
+=========================
+
+https://react.dev/learn/thinking-in-react
+======
+```
+npm create vite@latest 
+ customerapp
+ React
+ JavaScript
+ Yes for installing node modules
+
+```
+
+
+
+

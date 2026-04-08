@@ -1,6 +1,6 @@
 export default function User(props) {
     let user = props.user;
-    let {name, username, email} = user;
+    let {name, username, email} = user; // desctructuring
     return (
         <div>
             <h1>{name}</h1>

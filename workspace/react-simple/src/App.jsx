@@ -1,6 +1,7 @@
 import Users from "./components/Users"
 
 
+// returns JSX
 function App() {
   return (
     <div>
