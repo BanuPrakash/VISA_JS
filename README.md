@@ -1215,6 +1215,11 @@ npm create vite@latest
 
 ```
 
+React: uni-directional data flow [ parent -> child], one-way mapping
+Angular: two-way binding [ parent <--> child]
+
+=========
+
 
 
 
