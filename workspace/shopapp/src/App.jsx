@@ -9,6 +9,7 @@ function App() {
   return (
    <div>
       <NavbarComponent />
+      {/* Routes is like Switch, Route is case */}
       <Routes> 
         <Route path='/products' element={<ProductList />}/>
         <Route path='/cart' element={<CartList />}/>

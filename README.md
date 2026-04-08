@@ -1270,3 +1270,15 @@ href is for Server Side Routing
 Client Side Routing using as={Link} and to="/url"
  <Nav.Link as={Link} to="/cart">Cart</Nav.Link> 
 ```
+
+class ProductList extends Component {
+    state = {
+        "products" : []
+    }
+
+    doTask(data) {
+        this.setState({
+            "products": data
+        })
+    }
+}
