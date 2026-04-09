@@ -1270,3 +1270,48 @@ href is for Server Side Routing
 Client Side Routing using as={Link} and to="/url"
  <Nav.Link as={Link} to="/cart">Cart</Nav.Link> 
 ```
+
+3) useReducer hook : prefer this over useState() if
+a) state mutation is conditional
+b) state mutation depends on previous state
+c) state is complex
+
+let [count, setCount] = useState(10);
+setcount(100); 
+
+state:
+```
+{
+    "items": [
+        {"id": 2, "name": "A", "qty": 1, "amount": 52323},
+        {"id": 5, "name": "Z", "qty": 1, "amount": 89993},
+    ],
+    qty: 2,
+    total : 5252342
+}
+```
+
+Actions:
+1) ADD_TO_CART
+2) CLEAR_CART
+3) INCREMENT
+
+Action Objects:
+```
+{
+    type: 'ADD_TO_CART',
+    payload: {"id": 76, "name" : "P", "price": 662}
+}
+
+{
+    type: 'CLEAR_CART'
+}
+
+{
+    type :'INCREMENT',
+    payload: 2
+}
+
+```
+
+Reducer functions: (state, action) => new State

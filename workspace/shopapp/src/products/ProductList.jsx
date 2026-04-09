@@ -24,7 +24,6 @@ export default function ProductList() {
   return (
     <Container>
       <div className="row">
-        <h1>Product List!!!</h1>
           {
           products && products.map(product => <ProductCard product={product}/>)
         }
