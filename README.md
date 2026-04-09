@@ -1283,11 +1283,11 @@ state:
 ```
 {
     "items": [
-        {"id": 2, "name": "A", "qty": 1, "amount": 52323},
-        {"id": 5, "name": "Z", "qty": 1, "amount": 89993},
+        {"id": 14, "name": "A", 
+            "price": 642.22, "qty" : 1, "amount": 642.22},
     ],
-    qty: 2,
-    total : 5252342
+    qty: 1,
+    total : 642.22
 }
 ```
 

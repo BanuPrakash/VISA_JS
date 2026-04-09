@@ -11,6 +11,7 @@ export default function NavbarComponent() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Products</Nav.Link>
             <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/dummy">Reducer</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
