@@ -1291,6 +1291,8 @@ state:
 }
 ```
 
+
+
 Actions:
 1) ADD_TO_CART
 2) CLEAR_CART
@@ -1315,3 +1317,7 @@ Action Objects:
 ```
 
 Reducer functions: (state, action) => new State
+
+Instead of fetch:
+npm i axios
+npx json-server --watch data.json --port 1234
