@@ -1321,3 +1321,59 @@ Reducer functions: (state, action) => new State
 Instead of fetch:
 npm i axios
 npx json-server --watch data.json --port 1234
+
+===================
+
+Task 1:
+
+```
+ formData: {
+        page: 0,
+        signUp: {
+            ...
+        }
+        personal: {
+            ...
+        },
+        professional: {
+            ...
+        }
+    }
+ 
+ A Single Reducer should be good enough
+ case "ADD_PERSONAL":
+ case "ADD_PROFESSIONAL":
+ case "NEXT_PAGE":
+ case "PREV_PAGE" :
+
+const PageDisplay = () => {
+    swtich(page) {
+        case 0:
+            return <SignUp />
+        case 1:
+            return <PersonalForm />
+        case 2:
+            return <ProfessionalForm />
+        case 3:
+            return <Confirmation />
+    }
+}
+
+return (
+    <div>
+        <Step />
+        {
+            PageDisplay()
+        }
+        {page != 3 && <NavigationButton />}
+    </div>
+
+)
+
+```
+
+Task 2:
+https://opentdb.com/api.php?amount=10
+
+===================
+
