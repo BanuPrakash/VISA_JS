@@ -16,8 +16,8 @@ export default function Dummy() {
   function second() {
     dispatch({"type": "ADD_TO_CART", payload: {"id": 3, "name": "B", "price": 999.22}})
   }
-  function inc() {
-    dispatch({"type": "INCREMENT", payload: 14})
+  function inc(id) {
+    dispatch({"type": "INCREMENT", payload: id})
   }
   return (
 
@@ -29,7 +29,7 @@ export default function Dummy() {
         <hr />
         Total : {state.total} <br />
         Quantity: {state.quantity} <br />
-        
+
         {
             state.items.map(item => <div>{item.name}, {item.qty}, {item.price}, {item.amount}</div>)
         }
