@@ -25,7 +25,7 @@ export default function ProductList() {
     <Container>
       <div className="row">
           {
-          products && products.map(product => <ProductCard product={product}/>)
+          products && products.map(product => <ProductCard product={product} key={product.id} />)
         }
       </div>
     

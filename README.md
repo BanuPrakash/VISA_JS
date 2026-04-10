@@ -1388,6 +1388,55 @@ In functional Components we memoize the compoents
 
 npm install @faker-js/faker 
 
+```
+<ErrorBoundary>
+    <A/ >
+    <B />
+    <C />
+</ErrorBoundary>
+
+
+<ErrorBoundary>
+    <D/ >
+    <E />
+</ErrorBoundary>
+
+```
+
+==============
+
+```
+Controlled Components
+In a controlled component, form data is handled by a React component's state. 
+React serves as the "single source of truth" for the input values. 
+
+let [name, setName] = useState();
+let [age, setAge] = useState();
+
+<input onChange={(evt) => setName(evt.target.value) } />
+<input onChange={(evt) => setAge(evt.target.value) } />
+
+
+State Management: The value of the input element is tied to a state variable (e.g., via the useState hook).
+Updates: Every change triggers an onChange event handler that updates the React state.
+Best For: Complex forms, real-time validation, conditionally disabling buttons, or enforcing specific input formats (e.g., credit card numbers).
+Pros: Predictable behavior and easy integration with other React logic.
+Cons: Requires more "boilerplate" code (state and event handlers) and may cause more re-renders. 
+
+Uncontrolled Components
+In an uncontrolled component, form data is handled by the DOM. 
+
+
+State Management: The DOM maintains its own internal state for the form elements.
+Accessing Values: Instead of using state, you use a ref (via useRef) to "pull" the current value from the DOM only when needed, such as upon form submission.
+Initial Values: You can specify an initial value using the defaultValue attribute instead of value.
+Best For: Simple forms, performance-heavy components with many inputs, or integrating React with non-React libraries.
+Pros: Less code to write and potentially better performance for large forms.
+Cons: Harder to implement real-time validation or synchronize inputs. 
+
+
+ ```
+
 
 
 

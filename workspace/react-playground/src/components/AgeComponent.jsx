@@ -7,4 +7,10 @@ import React, { memo } from 'react'
   )
 }
 
-export default memo(AgeComponent);
+function doCheck(prevProps, props) {
+    if(props.age > prevProps.age + 5) {
+        return true;
+    }
+    else false;
+}
+export default memo(AgeComponent, doCheck);
