@@ -1376,4 +1376,19 @@ Task 2:
 https://opentdb.com/api.php?amount=10
 
 ===================
+https://legacy.reactjs.org/docs/reconciliation.html
+
+name = "Roger"
+age = 24
+
+When State changes --> re-render, forces it's children also to re-render
+
+class Component --> shouldComponentUpdate() --> true render(); false --> don't call render()
+In functional Components we memoize the compoents
+
+npm install @faker-js/faker 
+
+
+
+
 
