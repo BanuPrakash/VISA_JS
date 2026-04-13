@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
  
 import { Badge } from 'react-bootstrap';
 import { useAppSelector } from '../redux/store';
+// import { useSelector } from 'react-redux';
 
 export default function NavbarComponent() {
   let {quantity}  = useAppSelector(state => state.cart)
+  // let {quantity} = useSelector(state => state.hg)
 
   return (
     <Navbar bg="dark" data-bs-theme="dark">

@@ -34,8 +34,8 @@ export default function QuestionContextProvider({ children }) {
 
     useEffect(() => {
         async function fetchData() {
-            let response = await axios.get("https://opentdb.com/api.php?amount=10");
-            let questions = response.data.results;
+            let response = await axios.get("http://localhost:1234/questions");
+            let questions = response.data;
             setQuestions(questions);
             setCurrentQuestion(questions[0]);
         }

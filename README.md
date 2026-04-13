@@ -1694,6 +1694,9 @@ useSelector(): The selector is approximately equivalent to the mapStateToProps a
 useDispatch(): The selector is approximately equivalent to the mapDispatchToProps argument to connect conceptually.
 
 
+================================
+
+RTK Query: 
 
 
 

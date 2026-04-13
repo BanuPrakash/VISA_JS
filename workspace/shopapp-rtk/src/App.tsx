@@ -4,6 +4,7 @@ import ProductList from './products/ProductList'
 import CartList from './cart/CartList'
 import Details from './misc/Details'
 import Default from './misc/Default'
+// import { connect } from 'react-redux'
 
 
 function App() {
@@ -21,5 +22,7 @@ function App() {
    </div>
   )
 }
+
+// connect(mapStateToProps, mapDispatchtoProps)(App);
 
 export default App

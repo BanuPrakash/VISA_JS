@@ -12,13 +12,13 @@ const initialState:CartState = {
     quantity: 0,
     total: 0
 }
-
+// export default function cartReducer(state = intialState, action)
 const cartSlice = createSlice({
     'name': 'cart',
     initialState,
     reducers: {
         addToCart: (state, action:PayloadAction<Product>) => {
-            // note: state is clone of original state
+            // note: state is clone of original state {...state}
             // sent by RTK
             let item = {...action.payload, qty : 1, amount: action.payload.price};
             state.items.push(item);

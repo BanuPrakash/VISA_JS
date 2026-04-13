@@ -2,10 +2,19 @@
 import { Button, Container } from 'react-bootstrap';
 import { useAppSelector } from '../redux/store';
 import CartRow from './CartRow'
- 
+import { useDispatch } from 'react-redux';
+import { clearCart } from '../redux/features/cartSlice';
 
 export default function CartList() {
  let {total, items} = useAppSelector(state => state.cart)
+ 
+  let dispatch = useDispatch();
+  function doCheckout() {
+      // create order
+      // axios.post
+      dispatch(clearCart());
+ }
+ 
   return (
     <Container>
       <div>
@@ -20,7 +29,7 @@ export default function CartList() {
       <div className='row'>
         <div className='col-md-10'>&nbsp;</div>
         <div className='col-md-2'>
-          <Button>Checkout</Button>
+          <Button onClick={doCheckout}>Checkout</Button>
         </div>
       </div>
     </Container>
