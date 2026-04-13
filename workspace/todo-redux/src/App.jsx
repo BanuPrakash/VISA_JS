@@ -1,6 +1,19 @@
 import { connect } from 'react-redux'
 import './App.css'
+import { useRef } from 'react'
+
 function App(props) {
+  let todoRef = useRef();
+  
+  function addTodo() {
+    let todo = {
+      id: new Date().getTime(),
+      text: todoRef.current.value,
+      completed: false
+    }
+    props.add(todo);
+  }
+
  return (
   <div id="app">
     <div>
@@ -9,8 +22,9 @@ function App(props) {
         Welcome {props.displayName}
       </div>
       <input type="text"
+      ref={todoRef}
       placeholder="Enter a task ..." />
-      <button>
+      <button onClick={addTodo}>
         Add
       </button>
       <ul>
@@ -21,9 +35,12 @@ function App(props) {
               textDecoration: todo.completed ? "line-through" : "none",
               color: todo.completed ? "red" : "black"
             }}
+            onClick={() => props.toggle(todo.id)}
             >
               {todo.text}
-              <button>Remove</button>
+              <button
+               onClick={() => props.remove(todo.id)}
+              >Remove</button>
           </li>
         ))
       }
@@ -39,6 +56,15 @@ function mapStateToProps(state) {
     "todoList": state.todos
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    add: (todo) => dispatch({type: 'ADD_TODO', payload: todo}),
+    remove: id => dispatch({type: 'REMOVE_TODO', payload: id}),
+    toggle: id => dispatch({type: 'TOGGLE_TODO', payload: id})
+  }
+}
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 ) (App);
