@@ -1520,7 +1520,7 @@ react-redux
         }
      }
 
-```
+
 
 connect(
     mapStateToProps,
@@ -1534,7 +1534,98 @@ function mapStateToProps(state) {
     }
 }
 
-<img src={props.pic} />
+function mapDispatchToProps(dispatch) {
+    return: {
+        add: product => dispatch({type:'ADD_TO_CART', payload: product}),
+        change: pic => dispatch({type:'CHANGE_PIC', payload: pic}),
+        clear: () => dispatch({type:'CLEAR_CART})
+    }
+}
+
+function App(props) {
+
+}
+
+<button type="button"
+    onClick={() => props.add({...})}
+    >
+    Add to Cart
+</button>
+
+state, action
+
+let data = [....];
+// don't do data.push(62);
+
+return [...data, 62];
+
+```
+=====
+
+Recap of prev week:
+JavaScript:
+1) loosely typed, dynamically typed, interpretted and event driven programming language.
+2) executes within JS engine: V8, spidermonkey, JavaScriptVM, Nashorn, Rhino...
+3) Callbacks, event loop, MicroTask Queue and MacroTaskQueue
+4) Creation and Execution Context.
+5) bind, call, apply..
+6) ES6+ features: arrow [lambda] functions, desctructuring, clone, Promise, template string
+
+NodeJS: Why NodeJS and structure of NodeJS
+package.json, npm to install depdencies and execute scripts
+Webpack: build tool: automation
+TypeScript: statically typed language.
+tsc compiles ts files into js
+* string, boolean, number, enum, type, interface, class, void, undefined, null
+
+* union types
+* infer keyword [ReturnType]
+* Template String literal: union of strings
+* tsconfig.json
+
+React:
+* React.createElement() : JSX to JS object [ potential DOM] - Virtual DOM
+react-dom: JS object to UI elements [DOM]
+* functional component: returns JSX -> React.createElement() -> JS
+* class component: render() returns JSX -> React.createElement() -> JS
+upto React 16.8 version class component was used if we had state and life-cycle methods to implement
+React 16.8 introduced Hooks: giving capability to functional components to be used in place of class component.
+* useState
+* useEffect
+* useReducer
+
+Context: placeholder of data, to avoid props-drill.
+Provider placed the data in Context
+Consumer gets the data from context: useContext() is a hook for Consumer
+
+* react-router-dom:
+client side routing: different URL should show different Component
+BrowserRouter, Routes, Route
+* useParams to read path parameter.
+Link: instead of href for client side routing
+
+React using TypeScript.
+
+=================================
+
+Redux: Predicatable State Management for applications of large scale.
+Flux architecure: uni-directional data flow
+Action -> dispatcher -> store -> view
+
+Characters of Redux:
+1) store: central place for entire data. Single source per application
+store is the place where state resides
+2) reducers: functions which accept state and action, returns a new state.
+3) root reducer: combine all reducers. store interacts only with root reducer which internally calls other reducers.
+
+Integrating react and redux: react-redux library
+========
+
+
+
+
+
+
 
 
 
