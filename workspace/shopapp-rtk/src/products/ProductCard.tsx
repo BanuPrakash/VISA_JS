@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import { CartContext } from '../context/CartContextProvider';
+
 import { Link } from 'react-router-dom';
 import type { Product } from '../types';
 
@@ -11,7 +11,7 @@ type AppProps = {
 
 export default function ProductCard({product}: AppProps) {
   let {id, title, price, description, images} = product;
-  let {addToCart} = useContext(CartContext); // Consumer
+ 
   return (
     <div className="col-sm-6 col-md-4">
        <Card>
@@ -26,7 +26,7 @@ export default function ProductCard({product}: AppProps) {
         </Card.Body>
         <Card.Footer>
           Price ${price} &nbsp;
-          <Button variant='success' onClick={() => addToCart(product)}>Add to Cart</Button>
+          <Button variant='success'>Add to Cart</Button>
         </Card.Footer>
       </Card>
     </div>

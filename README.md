@@ -1670,6 +1670,14 @@ Task: Shopapp-ts migrate to use RTK instead of React Context.
 
     Copy shopapp-ts files from "src" to shopapp-rtk "src" folder
     Pending: remove all references to Context 
+    1) delete context folder
+    2) delete reducers folder
+    3) in main.tsx remove usage of CartContextProvider
+    4) in ProductCard.tsx remove usage of Context [ addtoCart..]
+    5) remove Dummy.jsx
+    6) NavbarComponent: remove Link to Dummy and Context usage
+    7) CartList: remove references to Context
+    8) App.jsx: remove References to Dummy
 ```
 
 
