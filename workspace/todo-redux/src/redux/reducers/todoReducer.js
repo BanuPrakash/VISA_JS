@@ -1,5 +1,4 @@
  
- 
 export default function todoReducer(state = [{id: 1, "text": "Read Redux", completed: true}], action) {
     switch(action.type) {
         case 'ADD_TODO':
