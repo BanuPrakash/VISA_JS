@@ -1621,6 +1621,56 @@ store is the place where state resides
 Integrating react and redux: react-redux library
 ========
 
+Think Redux --> Spring Framework like
+Redux toolkit --> like Spring boot [opiniated]
+
+====
+
+Redux Toolkit [RTK]
+
+createSlice: A function that accepts an initial state, an object of reducer functions, and a "slice name", and automatically generates action creators and action types that correspond to the reducers and state.
+
+```
+const intialState = [];
+const todoSlice = createSlice({
+  name: 'todos',
+  initialState,
+  reducers: {
+    addtodo: (state, action) {
+      state.push(action.payload)
+    },
+    removeTodo: (state, action) {
+        state.filter( todo => todo.id !=  action.payload)
+    },
+    toggleTodo: (state, action) {
+      state.forEach(todo => {
+        if(todo.id === action.payload) {
+                    todo.completed: !todo.completed
+        };
+    });
+})
+
+export const { addtodo, removeTodo, toggleTodo } = todoSlice.actions
+export default todoSlice.reducer
+
+addtodo(todo);
+
+```
+
+Task: Shopapp-ts migrate to use RTK instead of React Context.
+
+```
+    npm create vite@latest
+    Project-name: shopapp-rtk
+    React
+    TypeScript
+    ---
+    shopapp-rtk> npm i @reduxjs/toolkit react-redux
+    shopapp-rtk> npm i axios bootstrap react-bootstrap react-router-dom
+
+    Copy shopapp-ts files from "src" to shopapp-rtk "src" folder
+    Pending: remove all references to Context 
+```
 
 
 
@@ -1629,5 +1679,4 @@ Integrating react and redux: react-redux library
 
 
 
-
-
+ 

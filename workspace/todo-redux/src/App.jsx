@@ -5,6 +5,18 @@ import { useRef } from 'react'
 function App(props) {
   let todoRef = useRef();
   
+  function remove(evt, id) {
+    // Event capturing and bubbling phase
+    evt.stopPropagation();
+    console.log("Called remove")
+    props.remove(id);
+  }
+
+  function toggle(evt, id) {
+    evt.stopPropagation();
+    console.log("Called toggle")
+    props.toggle(id);
+  }
   function addTodo() {
     let todo = {
       id: new Date().getTime(),
@@ -15,8 +27,8 @@ function App(props) {
   }
 
  return (
-  <div id="app">
-    <div>
+  <div id="app" onClick={() => console.log("Div id=app clicked")}>
+    <div onClick={() => console.log("Div  clicked")}>
       <h1>Todo List</h1>
       <div>
         Welcome {props.displayName}
@@ -24,7 +36,7 @@ function App(props) {
       <input type="text"
       ref={todoRef}
       placeholder="Enter a task ..." />
-      <button onClick={addTodo}>
+      <button onClick={addTodo} type='button'>
         Add
       </button>
       <ul>
@@ -35,11 +47,11 @@ function App(props) {
               textDecoration: todo.completed ? "line-through" : "none",
               color: todo.completed ? "red" : "black"
             }}
-            onClick={() => props.toggle(todo.id)}
+            onClick={(evt) => toggle(evt, todo.id)}
             >
               {todo.text}
-              <button
-               onClick={() => props.remove(todo.id)}
+              <button type='button'
+               onClick={(evt) => remove(evt, todo.id)}
               >Remove</button>
           </li>
         ))
