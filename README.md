@@ -1678,6 +1678,13 @@ Task: Shopapp-ts migrate to use RTK instead of React Context.
     6) NavbarComponent: remove Link to Dummy and Context usage
     7) CartList: remove references to Context
     8) App.jsx: remove References to Dummy
+
+    After this:
+    npm run dev
+    check products if its listed...
+
+    Resume @ 1:50
+    
 ```
 
 
