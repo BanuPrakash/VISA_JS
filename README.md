@@ -1268,7 +1268,9 @@ http://amazon.com/cart
 href is for Server Side Routing
 
 Client Side Routing using as={Link} and to="/url"
+```
  <Nav.Link as={Link} to="/cart">Cart</Nav.Link> 
+
 ```
 
 3) useReducer hook : prefer this over useState() if
@@ -1299,6 +1301,7 @@ Actions:
 3) INCREMENT
 
 Action Objects:
+
 ```
 {
     type: 'ADD_TO_CART',
@@ -1403,8 +1406,7 @@ npm install @faker-js/faker
 
 ```
 
-==============
-
+ 
 ```
 Controlled Components
 In a controlled component, form data is handled by a React component's state. 
@@ -1683,8 +1685,7 @@ Task: Shopapp-ts migrate to use RTK instead of React Context.
     npm run dev
     check products if its listed...
 
-    Resume @ 1:50
-    
+
 ```
 
 
