@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 
 import { Link } from 'react-router-dom';
 import type { Product } from '../types';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/features/cartSlice';
 
 type AppProps = {
   product: Product
@@ -10,7 +12,7 @@ type AppProps = {
 
 export default function ProductCard({product}: AppProps) {
   let {id, title, price, description, images} = product;
- 
+  let dispatch = useDispatch();
   return (
     <div className="col-sm-6 col-md-4">
        <Card>
@@ -25,7 +27,10 @@ export default function ProductCard({product}: AppProps) {
         </Card.Body>
         <Card.Footer>
           Price ${price} &nbsp;
-          <Button variant='success'>Add to Cart</Button>
+          <Button 
+            variant='success'
+            onClick={() => dispatch(addToCart({...product}))}
+            >Add to Cart</Button>
         </Card.Footer>
       </Card>
     </div>

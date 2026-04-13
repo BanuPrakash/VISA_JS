@@ -1687,7 +1687,11 @@ Task: Shopapp-ts migrate to use RTK instead of React Context.
 
 
 ```
+No need for: connect, mapStateToProps, mapDispatchToProps
 
+useSelector(): The selector is approximately equivalent to the mapStateToProps argument to connect conceptually.
+
+useDispatch(): The selector is approximately equivalent to the mapDispatchToProps argument to connect conceptually.
 
 
 
