@@ -2,13 +2,21 @@ import { configureStore } from "@reduxjs/toolkit";
 import { cartReducer } from "./features/cartSlice";
 import { profileReducer } from "./features/profileSlice";
 import { useSelector, type TypedUseSelectorHook } from "react-redux";
+import { productApi } from "../api/productsApi";
+import { pokemonApi } from "../api/pokemanApi";
+
 
 const store = configureStore({
     // root reducer, no need to write combineReducers(...)
     reducer: {
         cart: cartReducer,
-        profile: profileReducer
+        profile: profileReducer,
+        [productApi.reducerPath]: productApi.reducer,
+        [pokemonApi.reducerPath]: pokemonApi.reducer
     },
+     middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(productApi.middleware)
+        .concat(pokemonApi.middleware),
     // devTools: true //compose(window.__REDUX_DEVTOOLS_EXTENSION__())
 })
 

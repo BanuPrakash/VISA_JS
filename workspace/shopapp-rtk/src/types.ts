@@ -8,6 +8,10 @@ export type Product = {
   thumbnail: string;
 }
 
+export type ProductsResponse = {
+  products: Product[]
+}
+
 // inheritance
 // for interface CartItem extends Product 
 export type CartItem = Product & {

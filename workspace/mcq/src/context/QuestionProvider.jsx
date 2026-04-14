@@ -22,6 +22,8 @@ export default function QuestionContextProvider({ children }) {
     }
 
     useEffect(() => {
+        if (!questions) return;
+
         let totalCorrect = 0;
         Object.keys(selectedAnswers).forEach((index) => {
             //    console.log(selectedAnswers[index], questions[index-1].correct_answer);
@@ -30,7 +32,7 @@ export default function QuestionContextProvider({ children }) {
             }
         });
         setCorrect(totalCorrect);
-    })
+    }, [selectedAnswers, questions])
 
     useEffect(() => {
         async function fetchData() {
@@ -44,25 +46,20 @@ export default function QuestionContextProvider({ children }) {
 
 
     function nextQuestion() {
-        if (currentIndex < 3) {
-            setCurrentIndex(currentIndex + 1);
-            // setCurrentQuestion(questions[currentIndex]);
-        }
+        const lastIndex = (questions?.length ?? 1) - 1;
+        if (currentIndex < lastIndex) setCurrentIndex(currentIndex + 1);
     }
 
     useEffect(() => {
-        if (questions) {
-            setCurrentQuestion(questions[currentIndex + 1]);
-        }
-    }, [currentIndex])
+        if (!questions) return;
+        setCurrentQuestion(questions[currentIndex]);
+    }, [currentIndex, questions])
 
     function prevQuestion() {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-            //    setCurrentQuestion(questions[currentIndex]);
-        }
+        if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
     }
 
+    // not working, fix this function
     function answerQuestion(qid, selectedOption) {
         if (questions[qid - 1].correct_answer === selectedOption) {
             setCorrect(correct + 1);

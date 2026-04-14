@@ -19,7 +19,7 @@ export default function NavbarComponent() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Products</Nav.Link>
             <Nav.Link as={Link} to="/cart">Cart <Badge>{quantity}</Badge></Nav.Link>
-  
+            <Nav.Link as={Link} to="/pokemon">Pokemon</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

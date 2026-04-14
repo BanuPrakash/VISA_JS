@@ -1696,8 +1696,13 @@ useDispatch(): The selector is approximately equivalent to the mapDispatchToProp
 
 ================================
 
-RTK Query: 
+RTK Query: Alternate TanStack Query
 
+RTK Query is an advanced data fetching and caching tool, designed to simplify common cases for loading data in a web application.
+
+https://redux.js.org/tutorials/fundamentals/part-6-async-logic
+
+https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
 
 
