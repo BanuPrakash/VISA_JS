@@ -7,7 +7,9 @@ import { useProductsQuery } from "../api/productsApi";
 
 export default function ProductList() {
 
-  let {data, isLoading, isFetching, isError, refetch } = useProductsQuery();  
+  let {data, isLoading, isFetching, isError, refetch } = useProductsQuery(undefined, {
+    pollingInterval:5000
+  });  
  
 
   if(isLoading) {

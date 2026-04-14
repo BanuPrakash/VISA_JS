@@ -1704,6 +1704,16 @@ https://redux.js.org/tutorials/fundamentals/part-6-async-logic
 
 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
+=================
+
+1) Abdul Bari
+https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O
+
+2) Data Structures & Algorithms in Java + 150 Leetcode Problems
+
+https://www.udemy.com/share/109o8Q3@EmfReqyJS3I9rgXPddZ0ghrILFEVi1miXPeITlPNw0ixrOSN_wdGwKTgDIRlvQ==/
+
+
 
 
 
